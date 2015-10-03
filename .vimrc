@@ -158,6 +158,10 @@ set ruler
 set number
 "タブの代わりに半角スペース
 set expandtab
+
+set cursorline
+
+
 "タブ2文字分
 ""set tabstop=2
 ""set softtabstop=2
