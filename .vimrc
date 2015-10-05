@@ -39,9 +39,9 @@ NeoBundle 'vim-latex/vim-latex'
 
 
 " コード補完
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'marcus/rsense'
-NeoBundle 'supermomonga/neocomplete-rsense.vim'
+"NeoBundle 'Shougo/neocomplete.vim'
+"NeoBundle 'marcus/rsense'
+"NeoBundle 'supermomonga/neocomplete-rsense.vim'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-surround'
 "
