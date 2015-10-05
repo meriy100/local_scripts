@@ -136,6 +136,7 @@ eval "$(rbenv init - zsh)"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$HOME/local/bin:$PATH"
+export PATH="$HOME/local/script/bin:$PATH"
 
 
 
@@ -170,3 +171,4 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 export EDITOR=vim        # エディタをvimに設定
 ##android studio
 export PATH="$HOME/android-studio/bin/:$PATH"
+
