@@ -90,6 +90,7 @@ setopt noautoremoveslash
 setopt complete_aliases
 ## エイリアスを設定
 alias la="ls -a"
+alias ll="ls -l"
 alias ls="ls --color"
 alias gr="grep -rn --color=auto"
 alias bim='vim'
