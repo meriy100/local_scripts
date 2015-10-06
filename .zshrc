@@ -95,6 +95,7 @@ alias ls="ls --color"
 alias gr="grep -rn --color=auto"
 alias bim='vim'
 alias bi='vim'
+alias :e='vim'
 alias latexmk='latexmk -pvc'
 alias svn ignore='svn propset svn:ignore -R -F .svnignore .'
 
