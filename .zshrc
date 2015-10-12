@@ -5,7 +5,7 @@ export TERM=xterm-256color
 ## 履歴の保存先
 HISTFILE=$HOME/.zsh-history
 ## メモリに展開する履歴の数
-HISTSIZE=100000
+HISTSIZE=100
 ## 保存する履歴の数
 SAVEHIST=100000
 
