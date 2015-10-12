@@ -173,4 +173,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 export EDITOR=vim        # エディタをvimに設定
 ##android studio
 export PATH="$HOME/android-studio/bin/:$PATH"
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
 
