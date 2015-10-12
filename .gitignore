@@ -1,6 +1,7 @@
 */*
 .*.swp
 .rbenv/*
+.rbenv
 .ICEauthority
 .Xauthority
 .bash_history
