@@ -88,27 +88,6 @@ setopt list_packed
 setopt noautoremoveslash
 ## エイリアス使用時の補完を有効に
 setopt complete_aliases
-## エイリアスを設定
-alias la="ls -a"
-alias ll="ls -l"
-alias ls="ls --color"
-alias gr="grep -rn --color=auto"
-alias bim='vim'
-alias bi='vim'
-alias :e='vim'
-alias latexmk='latexmk -pvc'
-alias svn ignore='svn propset svn:ignore -R -F .svnignore .'
-
-alias LINE="wine .wine/drive_c/users/canon/LINE/LINE.exe"
-
-alias svg_to_eps='inkscape -z -E'
-
-alias xmodmapdo='xmodmap ~/.Xmodmap'
-alias sourcedo='source ~/.zshrc'
-
-# sudo の後のコマンドでエイリアスを有効にする
-alias sudo='sudo '
-
 ## プロンプトの設定
 
 autoload colors
@@ -173,6 +152,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 export EDITOR=vim        # エディタをvimに設定
 ##android studio
 export PATH="$HOME/android-studio/bin/:$PATH"
+
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -f ~/.zshrc.alias ] && source ~/.zshrc.alias
 
 
