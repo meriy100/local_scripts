@@ -20,3 +20,7 @@ alias sourcedo='source ~/.zshrc'
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
 
+### Aliases ###
+#時刻を表示させる
+alias history='history -E'
+

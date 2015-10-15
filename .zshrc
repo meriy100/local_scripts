@@ -93,7 +93,7 @@ setopt complete_aliases
 autoload colors
 colors
 #PROMPT="%{${fg[green]}%}[%n@%m] %(!.#.$) %{${reset_color}%}
-PROMPT="%{${fg[cyan]}%}[%n]%{${fg[green]}%}%~%{${reset_color}%} 
+PROMPT="%{${fg[cyan]}%}[%n]%{${fg[green]}%}%~%{${reset_color}%}
 >"
 #%{${fg[green]}%}[%n] %(!.#.$) %{${reset_color}%}"
 #%{${fg[yellow]}%}%[%n]$%{${reset_color}%}"
