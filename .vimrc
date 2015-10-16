@@ -280,7 +280,7 @@ set scrolloff=12
 
 "ショートカット C-s C-q
 map  <C-q> :q<CR>
-map  <C-s> :w!<CR>
+nmap  <C-s> :w!<CR>
 imap <C-s> <Esc>:w!<CR>
 
 
