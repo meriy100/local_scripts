@@ -2,7 +2,6 @@
 "プラグインのセットアップ
 """""""""""""""""""""
 
-
 "if has('vim_starting')
 "  set nocompatible               " Be iMproved
 
@@ -24,7 +23,6 @@ endif
 
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
-
 " Let NeoBundle manage NeoBundle
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -45,7 +43,7 @@ NeoBundle 'vim-latex/vim-latex'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-surround'
 "
-" " 静的解析
+" 静的解析
 NeoBundle 'scrooloose/syntastic'
 "
 " " ドキュメント参照
@@ -115,7 +113,6 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 let g:rsenseHome = '/usr/local/lib/rsense-0.3'
 let g:rsenseUseOmniFunc = 1
 
-
 " --------------------------------
 " neocomplete.vim
 " --------------------------------
@@ -136,14 +133,19 @@ let g:syntastic_ruby_checkers = ['rubocop']
 
 """"""""""""""""""""""""""""""
 "im_control
-"日本語入力周り
+"日本語入力周り (input japanese)
 """"""""""""""""""""""""""""""
 " 「日本語入力固定モード」切替キー
-inoremap <silent> <C-j> <C-r>=IMState('FixMode')<CR>
+"inoremap <silent> <C-j> <C-r>=IMState('FixMode')<CR>
 " PythonによるIBus制御指定
-let IM_CtrlIBusPython = 1
+"let IM_CtrlIBusPython = 1
 "バッファ毎に日本語入力固定モードの状態を制御。
-let g:IM_CtrlBufLocalMode = 1
+"let g:IM_CtrlBufLocalMode = 1
+
+function! ImInActivate()
+  call system('fcitx-remote -c')
+endfunction
+"inoremap <silent> <ESC> :call ImInActivate()<CR>
 
 """""""""""""""""""""""""""""
 
@@ -261,7 +263,7 @@ let g:indent_guides_color_change_percent = 30
 let g:indent_guides_guide_size = 1
 
 "=======================================================
-"" colorscheme
+" colorscheme
 " ------------------------------------------------------
 syntax on
 ""set background=dark
@@ -278,7 +280,7 @@ set tags=.tags
 
 set scrolloff=12
 
-"ショートカット C-s C-q
+" ショートカット C-s C-q
 map  <C-q> :q<CR>
 nmap  <C-s> :w!<CR>
 imap <C-s> <Esc>:w!<CR>
