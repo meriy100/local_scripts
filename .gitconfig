@@ -1,0 +1,16 @@
+[user]
+	email = ttattataa@gmail.com
+  name = meriy100
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  st = status
+  br = branch
+  ch = checkout
+  co = commit
+  df = diff
+
+  start = flow feature start
+  publish = flow feature publish
+[url "git@github.com:"]
+	pushinsteadof = https://github.com/
