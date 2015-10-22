@@ -11,6 +11,7 @@
   df = diff
 
   start = flow feature start
+  finish = flow feature finish
   publish = flow feature publish
 [url "git@github.com:"]
 	pushinsteadof = https://github.com/
