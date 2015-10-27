@@ -24,3 +24,7 @@ alias sudo='sudo '
 #時刻を表示させる
 alias history='history -E'
 
+alias psg='ps -ax | grep'
+alias killq='kill -9'
+
+
