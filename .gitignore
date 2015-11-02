@@ -24,7 +24,6 @@ examples.desktop
 .gitconfig.r39412
 .gitconfig.r39443
 .gtk-custom-papers
-.latexmkrc
 .lesshst
 .netrc
 .rsense
@@ -42,4 +41,4 @@ examples.desktop
 empty
 index.html
 missfont.log
-
+.xdvirc
