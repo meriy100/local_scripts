@@ -9,7 +9,7 @@
   ch = checkout
   co = commit
   df = diff
-
+  amend = commit --amend -m
   start = flow feature start
   finish = flow feature finish
   publish = flow feature publish
