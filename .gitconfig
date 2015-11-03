@@ -9,6 +9,7 @@
   ch = checkout
   co = commit
   df = diff
+  dfw = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
   amend = commit --amend -m
   start = flow feature start
   finish = flow feature finish
