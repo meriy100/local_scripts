@@ -17,6 +17,9 @@ alias svg_to_eps='inkscape -z -E'
 alias xmodmapdo='xmodmap ~/.Xmodmap'
 alias sourcedo='source ~/.zshrc'
 
+alias tmuxrw="tmux rename-window"
+
+
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
 
