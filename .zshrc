@@ -1,7 +1,8 @@
 export LANG=ja_JP.utf8
 
-export TERM=xterm-256color
+compinit -u
 
+export TERM=xterm-256color
 ## 履歴の保存先
 HISTFILE=$HOME/.zsh-history
 ## メモリに展開する履歴の数
@@ -153,7 +154,7 @@ export EDITOR=vim        # エディタをvimに設定
 ##android studio
 export PATH="$HOME/android-studio/bin/:$PATH"
 
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+#[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 [ -f ~/.zshrc.alias ] && source ~/.zshrc.alias
 
 
