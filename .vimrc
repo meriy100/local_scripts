@@ -2,6 +2,7 @@
 "プラグインのセットアップ
 """""""""""""""""""""
 
+
 "if has('vim_starting')
 "  set nocompatible               " Be iMproved
 
@@ -150,6 +151,11 @@ endfunction
 """""""""""""""""""""""""""""
 
 
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
 
 
 "title を表示
@@ -163,6 +169,8 @@ set expandtab
 
 set cursorline
 
+" swp ファイルなし
+set nobackup
 
 "タブ2文字分
 ""set tabstop=2
@@ -204,7 +212,8 @@ set whichwrap=b,s,h,l,<,>,[,]
 set list
 set lcs=tab:>.,trail:_,extends:\
 
-
+" 縦線
+set cursorcolumn
 
 
 
