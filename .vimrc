@@ -2,6 +2,7 @@
 "プラグインのセットアップ
 """""""""""""""""""""
 
+
 "if has('vim_starting')
 "  set nocompatible               " Be iMproved
 
@@ -150,6 +151,11 @@ endfunction
 """""""""""""""""""""""""""""
 
 
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
 
 
 "title を表示
@@ -163,6 +169,8 @@ set expandtab
 
 set cursorline
 
+" swp ファイルなし
+set nobackup
 
 "タブ2文字分
 ""set tabstop=2
@@ -204,7 +212,8 @@ set whichwrap=b,s,h,l,<,>,[,]
 set list
 set lcs=tab:>.,trail:_,extends:\
 
-
+" 縦線
+set cursorcolumn
 
 
 
@@ -253,12 +262,12 @@ endif
 
 
 
-
+"" インデントガイド
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_start_level=2
 let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=022
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=027
 let g:indent_guides_color_change_percent = 30
 let g:indent_guides_guide_size = 1
 
@@ -271,6 +280,7 @@ colorscheme molokai
 
 highlight Normal ctermbg=none
 highlight Comment ctermfg=225
+
 "String default 144"
 highlight String ctermfg=220
 highlight Visual ctermbg=240
