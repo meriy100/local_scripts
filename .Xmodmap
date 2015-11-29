@@ -1,10 +1,10 @@
 !insert 345
-!remove mod1 = Alt_L
-!remove lock = Caps_Lock
-!remove mod4 = Super_L
-!remove mod4 = Super_R
+remove mod1 = Alt_L
+remove lock = Caps_Lock
+remove mod4 = Super_L
+remove mod4 = Super_R
 remove mod1 = Alt_R
-!remove control = Control_R
+remove control = Control_R
 
 
 !controle => Mode_switch
