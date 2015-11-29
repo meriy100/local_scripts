@@ -1,21 +1,26 @@
 !insert 345
 !remove mod1 = Alt_L
 !remove lock = Caps_Lock
-remove mod4 = Super_L
+!remove mod4 = Super_L
+!remove mod4 = Super_R
+remove mod1 = Alt_R
+!remove control = Control_R
 
-!Caps => Mode_switch
-keycode 66 = Mode_switch NoSymbol Mode_switch
+
+!controle => Mode_switch
+keycode 37 = Mode_switch NoSymbol Mode_switch
 
 
 !Hankaku_zenkaku => Esc
-keycode 49 = Escape NoSymbol Escape
+!keycode 9 = Escape NoSymbol Escape
 !Esc => Hankaku_zenkaku
-keycode 9  = Zenkaku_Hankaku Kanji grave asciitilde
+!keycode 49  = Zenkaku_Hankaku Kanji grave asciitilde
 
-!Henkan =>  Control_R NoSymbol Control_R
-keycode 100 =  Control_R NoSymbol Control_R
+!ALt R =>  Control_R NoSymbol Control_R
+keycode 108 =  Control_R NoSymbol Control_R
+keycode 100 =  Super_R NoSymbol Super_R
 !Katakana_Hiragana => Super_R
-keycode 101 = Super_R
+!keycode 101 = Super_R
 
 
 !keycode 64 = Mode_switch NoSymbol Mode_switch
@@ -33,7 +38,7 @@ keycode 46 = l L Right Right
 
 !47 ";" => KP_Enter
 !keycode 47 = semicolon plus KP_Enter KP_Enter
-keycode 47 = semicolon plus Return Return
+keycode 47 = semicolon colon Return Return
 
 !keycode 58 = m         M    KP_Enter KP_Enter
 
