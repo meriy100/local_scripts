@@ -1,4 +1,4 @@
-""""""""""""""""""""" 
+"""""""""""""""""""""
 "プラグインのセットアップ
 """""""""""""""""""""
 
@@ -294,5 +294,10 @@ set scrolloff=12
 map  <C-q> :q<CR>
 nmap  <C-s> :w!<CR>
 imap <C-s> <Esc>:w!<CR>
+
+
+if filereadable(expand('~/.vimrc.script'))
+  source ~/.vimrc.script
+endif
 
 
