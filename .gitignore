@@ -45,3 +45,12 @@ missfont.log
 .xdvirc
 nodebrew
 .Xmodmap.local
+.CFUserTextEncoding
+.DS_Store
+HEAD
+config
+description
+index
+packed-refs
+
+
