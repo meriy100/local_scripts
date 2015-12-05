@@ -1,6 +1,6 @@
-export LANG=ja_JP.utf8
+#export LANG=ja_JP.utf8
 
-compinit -u
+#compinit -u
 
 export TERM=xterm-256color
 ## 履歴の保存先
@@ -59,8 +59,8 @@ setopt print_eight_bit
 setopt share_history
 ## 補完候補のカーソル選択を有効に
 zstyle ':completion:*:default' menu select=1
-## 補完候補の色づけ
-eval `dircolors`
+# ## 補完候補の色づけ
+# eval `dircolors`
 export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 ## ディレクトリ名だけで cd
