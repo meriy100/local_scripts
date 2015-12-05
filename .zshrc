@@ -156,7 +156,7 @@ export EDITOR=vim        # エディタをvimに設定
 ##android studio
 export PATH="$HOME/android-studio/bin/:$PATH"
 
-#[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 [ -f ~/.zshrc.alias ] && source ~/.zshrc.alias
 
 

@@ -3,7 +3,7 @@
 alias la="ls -a"
 alias ll="ls -l"
 alias lla="ls -la"
-alias ls="ls --color"
+#alias ls="ls --color"
 alias gr="grep -rn --color=auto"
 alias bim='vim'
 alias bi='vim'
