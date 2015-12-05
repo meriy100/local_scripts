@@ -227,8 +227,8 @@ else
 endif
 
 " クリップボードの共有
-""set clipboard+=unnamed
-set clipboard=unnamedplus
+set clipboard=unnamed,autoselect
+""set clipboard=unnamedplus
 "折りたたみ
 set foldmethod=indent
 set foldlevel=2
