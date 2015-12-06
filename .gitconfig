@@ -16,3 +16,6 @@
   publish = flow feature publish
 #[url "git@github.com:"]
 #	pushinsteadof = https://github.com/
+[url "github:"]
+    InsteadOf = https://github.com/
+    InsteadOf = git@github.com
