@@ -19,6 +19,8 @@ alias xmodmapdo='xmodmap ~/.Xmodmap'
 alias sourcedo='source ~/.zshrc'
 
 alias tmuxrw="tmux rename-window"
+alias tmuxrs="tmux rename-session"
+alias tmuxns="tmux new-session -s"
 alias tmux="tmux -u"
 
 # sudo の後のコマンドでエイリアスを有効にする
