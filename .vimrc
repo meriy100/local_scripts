@@ -300,4 +300,5 @@ if filereadable(expand('~/.vimrc.script'))
   source ~/.vimrc.script
 endif
 
-
+set mouse=a
+set ttymouse=xterm2
