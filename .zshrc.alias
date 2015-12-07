@@ -33,4 +33,4 @@ alias history='history -E'
 alias psg='ps -ax | grep'
 alias killq='kill -9'
 
-
+alias tree="tree -N"
