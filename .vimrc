@@ -228,8 +228,8 @@ endif
 
 " クリップボードの共有
 "set clipboard=unnamed,autoselect
-""set clipboard+=unnamed
-set clipboard=unnamed,autoselect
+set clipboard+=unnamed
+""set clipboard=unnamed,autoselect
 ""set clipboard=unnamedplus
 "折りたたみ
 set foldmethod=indent

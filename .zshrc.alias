@@ -5,6 +5,8 @@ alias ll="ls -l"
 alias lla="ls -la"
 alias ls="ls -G"
 alias gr="grep -rn --color=auto"
+alias vi="/usr/local/bin/vim"
+alias vim="/usr/local/bin/vim"
 alias bim='vim'
 alias bi='vim'
 alias :e='vim'
