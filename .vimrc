@@ -154,9 +154,14 @@ endfunction
 augroup highlightIdegraphicSpace
   autocmd!
   autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
-  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　 /
 augroup END
 
+""augroup highlightOptionSpace
+""  autocmd!
+""  autocmd Colorscheme * highlight OptionSpace term=underline ctermbg=DarkBlue guibg=DarkBlue
+""  autocmd VimEnter,WinEnter * match OptionSpace / /
+""augroup END
 
 "title を表示
 set title
