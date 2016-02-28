@@ -72,6 +72,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
 
+NeoBundle 'tpope/vim-fugitive'
 
 " ...省略
 
