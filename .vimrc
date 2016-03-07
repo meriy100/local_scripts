@@ -303,6 +303,8 @@ map  <C-q> :q<CR>
 nmap  <C-s> :w!<CR>
 imap <C-s> <Esc>:w!<CR>
 
+nmap m :SyntasticCheck<CR>
+
 
 if filereadable(expand('~/.vimrc.script'))
   source ~/.vimrc.script
