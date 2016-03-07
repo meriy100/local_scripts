@@ -73,7 +73,7 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
 
 NeoBundle 'tpope/vim-fugitive'
-
+NeoBundle 'airblade/vim-gitgutter'
 " ...省略
 
 call neobundle#end()
@@ -312,3 +312,9 @@ endif
 
 set mouse=a
 set ttymouse=xterm2
+
+
+
+nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
+nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
+
