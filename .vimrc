@@ -177,6 +177,7 @@ set cursorline
 
 " swp ファイルなし
 set nobackup
+set noswapfile
 
 "タブ2文字分
 ""set tabstop=2
