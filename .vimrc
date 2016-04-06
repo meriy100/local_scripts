@@ -74,6 +74,9 @@ NeoBundle 'plasticboy/vim-markdown'
 
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
+
+" 複数カーソル
+NeoBundle 'terryma/vim-multiple-cursors'
 " ...省略
 
 call neobundle#end()
