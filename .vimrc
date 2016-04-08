@@ -32,7 +32,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 " Unite.vimで最近使ったファイルを表示できるようにする
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-latex/vim-latex'
 "NeoBundle 'im_control', {'type' : 'nosync', 'base' : '~/.vim/bundle/manual'}
 
@@ -47,12 +47,12 @@ NeoBundle 'tpope/vim-surround'
 " 静的解析
 NeoBundle 'scrooloose/syntastic'
 "
-" " ドキュメント参照
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'yuku-t/vim-ref-ri'
+""" " ドキュメント参照
+""NeoBundle 'thinca/vim-ref'
+""NeoBundle 'yuku-t/vim-ref-ri'
 "
-" " メソッド定義元へのジャンプ
-NeoBundle 'szw/vim-tags'
+""" " メソッド定義元へのジャンプ
+""NeoBundle 'szw/vim-tags'
 "
 " " 自動で閉じる
 NeoBundle 'tpope/vim-endwise'
