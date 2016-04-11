@@ -72,11 +72,12 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
 
+"  Git 差分とか
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 
 " 複数カーソル
-NeoBundle 'terryma/vim-multiple-cursors'
+" NeoBundle 'terryma/vim-multiple-cursors'
 " ...省略
 
 call neobundle#end()
@@ -121,13 +122,13 @@ let g:rsenseUseOmniFunc = 1
 " --------------------------------
 " neocomplete.vim
 " --------------------------------
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.ruby =  '[^.*\t]\.\w*\|\h\w*::'
+" let g:acp_enableAtStartup = 0
+" let g:neocomplete#enable_at_startup = 1
+" let g:neocomplete#enable_smart_case = 1
+" if !exists('g:neocomplete#force_omni_input_patterns')
+"   let g:neocomplete#force_omni_input_patterns = {}
+" endif
+" let g:neocomplete#force_omni_input_patterns.ruby =  '[^.*\t]\.\w*\|\h\w*::'
 " --------------------------------
 " rubocop
 " --------------------------------
@@ -147,9 +148,9 @@ let g:syntastic_ruby_checkers = ['rubocop']
 "バッファ毎に日本語入力固定モードの状態を制御。
 "let g:IM_CtrlBufLocalMode = 1
 
-function! ImInActivate()
-  call system('fcitx-remote -c')
-endfunction
+"function! ImInActivate()
+"  call system('fcitx-remote -c')
+"endfunction
 "inoremap <silent> <ESC> :call ImInActivate()<CR>
 
 """""""""""""""""""""""""""""
@@ -167,66 +168,10 @@ augroup END
 ""  autocmd VimEnter,WinEnter * match OptionSpace / /
 ""augroup END
 
-"title を表示
-set title
-"ルーラーを表示
-set ruler
-"行番号を表示
-set number
-"タブの代わりに半角スペース
-set expandtab
-
-set cursorline
-
-" swp ファイルなし
-set nobackup
-set noswapfile
-
 "タブ2文字分
 ""set tabstop=2
 ""set softtabstop=2
 ""set shiftwidth=2
-
-"java の場合 タブ4文字分
-if expand("%:t") =~ ".*\.java"
-  set tabstop=4
-  set softtabstop=4
-  set shiftwidth=4
-else
-  "タブ2文字分
-  set tabstop=2
-  set softtabstop=2
-  set shiftwidth=2
-endif
-
-"encoding = utf
-set encoding=utf-8
-scriptencoding utf-8
-" 保存する時の文字コード
-set fileencoding=utf-8
-" 開く時の文字コード
-set fileencodings=utf-8,cp932,euc-jp
-" 端末の文字コード
-set termencoding=utf-8
-"backspace で改行、インデント、以前入力した文字を削除できるようにする
-set backspace=indent,eol,start
-
-"ステータスラインの表示
-set laststatus=2
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
-
-" 文頭や文末で左右に動いたら次の行や前の行にいけるようにする
-set whichwrap=b,s,h,l,<,>,[,]
-
-" タブ文字とか半角とか色々を可視化
-set list
-set lcs=tab:>.,trail:_,extends:\
-
-" 縦線
-set cursorcolumn
-
-
-
 
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
@@ -235,15 +180,6 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
-
-" クリップボードの共有
-"set clipboard=unnamed,autoselect
-set clipboard+=unnamed
-""set clipboard=unnamed,autoselect
-""set clipboard=unnamedplus
-"折りたたみ
-set foldmethod=indent
-set foldlevel=2
 
 " () {} などの補完
 inoremap { {}<LEFT>
@@ -275,13 +211,13 @@ endif
 
 
 "" インデントガイド
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_start_level=2
-let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=022
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=027
-let g:indent_guides_color_change_percent = 30
-let g:indent_guides_guide_size = 1
+" "let g:indent_guides_enable_on_vim_startup=1
+" "let g:indent_guides_start_level=2
+" "let g:indent_guides_auto_colors=0
+" "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=022
+" "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=027
+" "let g:indent_guides_color_change_percent = 30
+" "let g:indent_guides_guide_size = 1
 
 "=======================================================
 " colorscheme
@@ -298,27 +234,17 @@ highlight String ctermfg=220
 highlight Visual ctermbg=240
 
 
-set tags=.tags
-
-set scrolloff=12
-
-" ショートカット C-s C-q
-map  <C-q> :q<CR>
-nmap  <C-s> :w!<CR>
-imap <C-s> <Esc>:w!<CR>
-
-nmap m :SyntasticCheck<CR>
-
 
 if filereadable(expand('~/.vimrc.script'))
   source ~/.vimrc.script
 endif
 
-set mouse=a
-set ttymouse=xterm2
 
 
+if filereadable(expand('~/home/.vimrc.set'))
+  source ~/home/.vimrc.set
+endif
 
-nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
-nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
-
+if filereadable(expand('~/home/.vimrc.map'))
+  source ~/home/.vimrc.map
+endif

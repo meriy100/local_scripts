@@ -1,0 +1,9 @@
+" ショートカット C-s C-q
+map  <C-q> :q<CR>
+nmap  <C-s> :w!<CR>
+imap <C-s> <Esc>:w!<CR>
+
+nmap m :SyntasticCheck<CR>
+
+nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
+nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
