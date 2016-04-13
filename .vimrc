@@ -235,8 +235,8 @@ highlight Visual ctermbg=240
 
 
 
-if filereadable(expand('~/.vimrc.script'))
-  source ~/.vimrc.script
+if filereadable(expand('~/home/.vimrc.script'))
+  source ~/home/.vimrc.script
 endif
 
 
