@@ -76,6 +76,11 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 
+" 色のプレビュー
+" ColorHighlight - start/update highlighting
+" ColorClear      - clear all highlights
+" ColorToggle     - toggle highlights
+NeoBundle 'lilydjwg/colorizer'
 " 複数カーソル
 " NeoBundle 'terryma/vim-multiple-cursors'
 " ...省略
