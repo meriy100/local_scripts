@@ -39,7 +39,30 @@ set backspace=indent,eol,start
 
 "ステータスラインの表示
 set laststatus=2
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+set statusline=%< " 行が長すぎるときに切り詰める位置
+set statusline+=%{fugitive#statusline()}  " Gitのブランチ名を表示
+set statusline+=%f " ファイルパス(相対)
+set statusline+=\ %m " 編集フラグ
+set statusline+=%r    " %r 読み込み専用フラグ
+set statusline+=%h    " %h ヘルプバッファフラグ
+set statusline+=%w    " %w プレビューウィンドウフラグ
+set statusline+=%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}  " fencとffを表示
+set statusline+=%y    " バッファ内のファイルのタイプ
+set statusline+=\     " 空白スペース
+set statusline+=%=    " 左寄せ項目と右寄せ項目の区切り
+set statusline+=\ \   " 空白スペース2個
+set statusline+=%1l   " 何行目にカーソルがあるか
+set statusline+=:
+set statusline+=%L    " バッファ内の総行数
+set statusline+=,
+set statusline+=%c    " 何列目にカーソルがあるか
+set statusline+=%V    " 画面上の何列目にカーソルがあるか
+set statusline+=\ \   " 空白スペース2個
+set statusline+=%P    " ファイル内の何％の位置にあるか
+
+
+
+
 
 " 文頭や文末で左右に動いたら次の行や前の行にいけるようにする
 set whichwrap=b,s,h,l,<,>,[,]
