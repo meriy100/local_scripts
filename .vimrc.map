@@ -2,8 +2,9 @@
 map  <C-q> :q<CR>
 nmap  <C-s> :w!<CR>
 imap <C-s> <Esc>:w!<CR>
+"imap <C-[> <Esc><CR>
 
-nmap m :SyntasticCheck<CR>
+map m :SyntasticCheck<CR>
 
 nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
 nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
