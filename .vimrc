@@ -1,5 +1,5 @@
-if filereadable(expand('~/home/.vimrc.plugins'))
-  source ~/home/.vimrc.plugins
+if filereadable(expand('~/.vim/.vimrc.plugins'))
+  source ~/.vim/.vimrc.plugins
 endif
 
 "Unit.vimの設定
@@ -146,16 +146,16 @@ highlight Visual ctermbg=240
 
 
 
-if filereadable(expand('~/home/.vimrc.script'))
-  source ~/home/.vimrc.script
+if filereadable(expand('~/.vim/.vimrc.script'))
+  source ~/.vim/.vimrc.script
 endif
 
 
 
-if filereadable(expand('~/home/.vimrc.set'))
-  source ~/home/.vimrc.set
+if filereadable(expand('~/.vim/.vimrc.set'))
+  source ~/.vim/.vimrc.set
 endif
 
-if filereadable(expand('~/home/.vimrc.keymap'))
-  source ~/home/.vimrc.keymap
+if filereadable(expand('~/.vim/.vimrc.keymap'))
+  source ~/.vim/.vimrc.keymap
 endif
