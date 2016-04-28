@@ -83,6 +83,10 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'lilydjwg/colorizer'
 " 複数カーソル
 " NeoBundle 'terryma/vim-multiple-cursors'
+
+" コメントON/OFFを手軽に実行
+NeoBundle 'tomtom/tcomment_vim'
+
 " ...省略
 
 call neobundle#end()
