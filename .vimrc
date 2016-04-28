@@ -251,5 +251,5 @@ if filereadable(expand('~/home/.vimrc.set'))
 endif
 
 if filereadable(expand('~/home/.vimrc.keymap'))
-  source ~/home/.vimrc.map
+  source ~/home/.vimrc.keymap
 endif
