@@ -81,6 +81,8 @@ NeoBundle 'airblade/vim-gitgutter'
 " ColorClear      - clear all highlights
 " ColorToggle     - toggle highlights
 NeoBundle 'lilydjwg/colorizer'
+" ステータスバー
+NeoBundle 'itchyny/lightline.vim'
 " 複数カーソル
 " NeoBundle 'terryma/vim-multiple-cursors'
 
