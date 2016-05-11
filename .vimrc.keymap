@@ -1,6 +1,6 @@
 " ショートカット C-s C-q
-map  <C-q> :q<CR>
-nmap  <C-s> :w!<CR>
+" map  <C-q> :q<CR>
+" nmap  <C-s> :w!<CR>
 imap <C-s> <Esc>:w!<CR>
 " imap <C-[> <Esc><CR>
 inoremap <silent> jj <ESC>
@@ -14,4 +14,9 @@ nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 
 nnoremap <silent> gff :Gdiff<CR>
 
+
+let mapleader = "\<Space>"
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>s :w<CR>
+nnoremap <Leader>q :q<CR>
 
