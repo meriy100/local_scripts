@@ -5,7 +5,13 @@ imap <C-s> <Esc>:w!<CR>
 " imap <C-[> <Esc><CR>
 inoremap <silent> jj <ESC>
 
-map m :SyntasticCheck<CR>
+nnoremap m :SyntasticCheck<CR>
 
 nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
 nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
+
+
+
+nnoremap <silent> gff :Gdiff<CR>
+
+
