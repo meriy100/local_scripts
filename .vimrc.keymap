@@ -2,7 +2,8 @@
 map  <C-q> :q<CR>
 nmap  <C-s> :w!<CR>
 imap <C-s> <Esc>:w!<CR>
-"imap <C-[> <Esc><CR>
+" imap <C-[> <Esc><CR>
+inoremap <silent> jj <ESC>
 
 map m :SyntasticCheck<CR>
 
