@@ -10,7 +10,10 @@ nnoremap m :SyntasticCheck<CR>
 nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
 nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 
-
+" 0, 9で行頭、行末へ
+nmap 1 0
+nmap 0 ^
+nmap 9 $
 
 nnoremap <silent> gff :Gdiff<CR>
 
