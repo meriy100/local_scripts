@@ -1,2 +1,3 @@
 .*.swp
-BetterTouchTool/Logs
+BetterTouchTool/**/*
+BetterTouchTool/bttdata2
