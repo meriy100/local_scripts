@@ -39,6 +39,13 @@ set backspace=indent,eol,start
 
 "ステータスラインの表示
 set laststatus=2
+let g:lightline = {
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
 " set statusline=%< " 行が長すぎるときに切り詰める位置
 " set statusline+=%{fugitive#statusline()}  " Gitのブランチ名を表示
 " set statusline+=%f " ファイルパス(相対)
