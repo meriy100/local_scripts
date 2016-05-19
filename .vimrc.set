@@ -43,7 +43,6 @@ let g:lightline = {
       \ 'component': {
       \   'readonly': '%{&readonly?"":""}',
       \ },
-      \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 " set statusline=%< " 行が長すぎるときに切り詰める位置
