@@ -94,8 +94,10 @@ setopt complete_aliases
 autoload colors
 colors
 #PROMPT="%{${fg[green]}%}[%n@%m] %(!.#.$) %{${reset_color}%}
-PROMPT="%{${fg[cyan]}%}[%n]%{${fg[green]}%}%~%{${reset_color}%}
-%(?|%{[32m%}🐰|%{[31m%}💥) >~%{${reset_color}%}"
+
+PROMPT="%{${fg[blue]}%}%B[%n]%b%{${reset_color}%}%{${fg[green]}%}%~%{${reset_color}%}
+%(?|%{${fg[green]}%}🐰 |%{${fg[red]}%}💥 )>%{${reset_color}%}"
+
 #%{${fg[green]}%}[%n] %(!.#.$) %{${reset_color}%}"
 #%{${fg[yellow]}%}%[%n]$%{${reset_color}%}"
 #PROMPT2="%{${fg[blue]}%}%_> %{${reset_color}%}"
@@ -139,7 +141,7 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
-RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+RPROMPT=$RPROMPT'%*${vcs_info_msg_0_}'
 
 
 #android sdk path
