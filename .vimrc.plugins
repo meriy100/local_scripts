@@ -88,6 +88,8 @@ NeoBundle 'itchyny/lightline.vim'
 
 " コメントON/OFFを手軽に実行
 NeoBundle 'tomtom/tcomment_vim'
+" エディターの設定の共有
+NeoBundle 'editorconfig/editorconfig-vim'
 
 " ...省略
 
