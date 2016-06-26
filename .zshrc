@@ -6,9 +6,9 @@ export TERM=xterm-256color
 ## 履歴の保存先
 HISTFILE=$HOME/.zsh-history
 ## メモリに展開する履歴の数
-HISTSIZE=100000
+HISTSIZE=1000000
 ## 保存する履歴の数
-SAVEHIST=100000
+SAVEHIST=1000000
 
 ## 補完機能の強化
 autoload -U compinit
