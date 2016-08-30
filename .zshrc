@@ -112,11 +112,11 @@ bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 
 ##rbenv path
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init - zsh)"
 
 ## nodebrew path
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+# export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -157,7 +157,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 export EDITOR=vim        # エディタをvimに設定
 ##android studio
 # export PATH="$HOME/android-studio/bin/:$PATH"
-function git(){hub "$@"} # zsh
+# function git(){hub "$@"} # zsh
 
 set clipboard=unnamed,autoselect
 
