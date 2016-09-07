@@ -71,6 +71,8 @@ NeoBundle 'kchmck/vim-coffee-script'
 
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
+" Swift のハイライト
+NeoBundle "kballard/vim-swift"
 
 "  Git 差分とか
 NeoBundle 'tpope/vim-fugitive'
