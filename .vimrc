@@ -45,10 +45,11 @@ let g:rsenseUseOmniFunc = 1
 " --------------------------------
 "syntastic_mode_mapをactiveにするとバッファ保存時にsyntasticが走る
 "active_filetypesに、保存時にsyntasticを走らせるファイルタイプを指定する
-let g:syntastic_mode_map = { 'mode': 'passive', 'passive_filetypes':    ['ruby', 'scss'] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'passive_filetypes':    ['ruby', 'scss', 'slim'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 
 let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_slim_checkers = ['slim_lint']
 
 """"""""""""""""""""""""""""""
 "im_control

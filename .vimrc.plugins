@@ -91,6 +91,10 @@ NeoBundle 'tomtom/tcomment_vim'
 " エディターの設定の共有
 NeoBundle 'editorconfig/editorconfig-vim'
 
+
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'othree/yajs.vim'
 " ...省略
 
 call neobundle#end()
