@@ -11,3 +11,7 @@ ln -sf ~/dotfiles/.vimrc.set ~/.vim/.vimrc.set
 ln -sf ~/dotfiles/.vimrc.keymap ~/.vim/.vimrc.keymap
 ln -sf ~/dotfiles/.vimrc.plugins ~/.vim/.vimrc.plugins
 ln -sf ~/dotfiles/.vimrc.script ~/.vim/.vimrc.script
+
+
+mkdir ~/local
+ln -sf ~/dotfiles/local/script ~/local/script
