@@ -17,6 +17,7 @@ nmap 9 $
 
 nnoremap <silent> gff :Gdiff<CR>
 
+nnoremap<silent>eo :NERDTreeToggle<CR>
 
 let mapleader = "\<Space>"
 nnoremap <Leader>w :w<CR>
