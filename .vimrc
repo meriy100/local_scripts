@@ -1,5 +1,9 @@
-if filereadable(expand('~/.vim/.vimrc.plugins'))
-  source ~/.vim/.vimrc.plugins
+" if filereadable(expand('~/.vim/.vimrc.plugins'))
+"   source ~/.vim/.vimrc.plugins
+" endif
+"
+if filereadable(expand('~/.vim/.vimrc.dein'))
+  source ~/.vim/.vimrc.dein
 endif
 
 "Unit.vimの設定

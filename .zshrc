@@ -186,3 +186,7 @@ w3m http://www.google.co.jp/$opt
 function cdu() {
   cd `git rev-parse --show-toplevel`
 }
+
+
+# neovim config
+export XDG_CONFIG_HOME="$HOME/.config"

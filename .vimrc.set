@@ -94,6 +94,6 @@ set tags=.tags
 set scrolloff=12
 
 set mouse=a
-set ttymouse=xterm2
+" set ttymouse=xterm2
 
 set incsearch
