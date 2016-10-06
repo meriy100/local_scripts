@@ -95,7 +95,7 @@ autoload colors
 colors
 #PROMPT="%{${fg[green]}%}[%n@%m] %(!.#.$) %{${reset_color}%}
 
-PROMPT="%{${fg[blue]}%}%B[%n]%b%{${reset_color}%}%{${fg[green]}%}%~%{${reset_color}%}
+PROMPT="%{${fg[blue]}%}%B[%n@%m]%b%{${reset_color}%}%{${fg[green]}%}%~%{${reset_color}%}
 %(?|%{${fg[green]}%}🐰 |%{${fg[red]}%}💥 )>%{${reset_color}%}"
 
 #%{${fg[green]}%}[%n] %(!.#.$) %{${reset_color}%}"
