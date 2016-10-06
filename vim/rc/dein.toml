@@ -11,6 +11,9 @@ repo = 'tomtom/tcomment_vim'
 [[plugins]] # カラースキーマ
 repo = 'tomasr/molokai'
 
+[[plugins]] # 補完
+repo = 'tpope/vim-surround'
+
 [[plugins]] # indent guides
 repo = 'nathanaelkane/vim-indent-guides'
 hook_add = '''
@@ -31,3 +34,13 @@ depends = ['context_filetype.vim']
 repo = 'Shougo/context_filetype.vim'
 
 
+[[plugins]] #  Git 差分とか
+repo = 'tpope/vim-fugitive'
+[[plugins]] #  Git 差分とか
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]] # 色のプレビュー
+repo = 'lilydjwg/colorizer'
+
+[[plugins]] # 自動で閉じる
+repo = 'tpope/vim-endwise'

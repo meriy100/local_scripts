@@ -1,5 +1,9 @@
 # 特定のファイルタイプで読み込む
 [[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = ['ruby']
+
+[[plugins]]
 repo  = 'Quramy/tsuquyomi'
 on_ft = ['typescript']
 
@@ -15,9 +19,31 @@ on_ft = ['coffee']
 repo = "slim-template/vim-slim"
 on_ft = ['slim']
 
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = ['markdown']
+
+[[plugins]]
+repo = 'vim-latex/vim-latex'
+on_ft = ['latex']
+
 [[plugins]] # toml syntax
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript', 'jsx']
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = ['javascript', 'jsx']
+[[plugins]]
+repo = 'othree/yajs.vim'
+on_ft = ['javascript', 'jsx']
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+on_cmd    = ['SyntasticCheck']
 
 # インサートモードに入ったら読み込む
 [[plugins]]
@@ -26,10 +52,14 @@ on_i = 1
 
 [[plugins]]
 repo   = 'Shougo/unite.vim'
+on_cmd = ["Unite"]
 
 # unite.vim を読み込んだら一緒に読み込む
 [[plugins]]
 repo = 'Shougo/neomru.vim'
+on_source = ['unite.vim']
+
+[[plugins]]
 repo =  'scrooloose/nerdtree'
 on_source = ['unite.vim']
 
@@ -38,10 +68,3 @@ on_source = ['unite.vim']
 repo      = 'thinca/vim-prettyprint'
 on_cmd    = ['PP', 'PrettyPrint']
 
-# 特定のマッピングを使ったら読み込む
-# 又、gvim でしか利用しない
-[[plugins]]
-repo   = 'thinca/vim-fontzoom'
-on_cmd = ['Fontzoom']
-on_map = ['<Plug>(fontzoom-']
-gui    = 1
