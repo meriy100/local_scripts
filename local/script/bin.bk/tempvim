@@ -1,0 +1,14 @@
+#!/Users/meriy100/.rbenv/shims/ruby
+
+require "tempfile"
+
+def tempvim
+  tmp = Tempfile.new "message"
+  system "vim #{tmp.path}"
+  STDOUT.puts tmp.path
+end
+
+if __FILE__ == $0
+  tempvim
+end
+

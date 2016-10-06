@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+branch_name = `git rev-parse --abbrev-ref HEAD`
+system("git push origin #{ARGV.join(" ")} #{branch_name}")
