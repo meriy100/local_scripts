@@ -1,38 +1,11 @@
-" if filereadable(expand('~/.vim/.vimrc.plugins'))
-"   source ~/.vim/.vimrc.plugins
-" endif
-"
 if filereadable(expand('~/.vim/.vimrc.dein'))
   source ~/.vim/.vimrc.dein
 endif
 
+""""""""""""""""""""""""""""""
 "Unit.vimの設定
 """"""""""""""""""""""""""""""
-" 入力モードで開始する
-let g:unite_enable_start_insert=1
-" バッファ一覧
 noremap <C-P> :Unite buffer<CR>
-" ファイル一覧
-noremap <C-N> :Unite -buffer-name=file file<CR>
-" 最近使ったファイルの一覧
-noremap <C-Z> :Unite file_mru<CR>
-" sourcesを「今開いているファイルのディレクトリ」とする
-noremap :uff :<C-u>UniteWithBufferDir file -buffer-name=file<CR>
-" ウィンドウを分割して開く
-au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-" ウィンドウを縦に分割して開く
-au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-" ESCキーを2回押すと終了する
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
-au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
-""""""""""""""""""""""""""""""
-" -------------------------------
-" Rsense
-" -------------------------------
-let g:rsenseHome = '/usr/local/lib/rsense-0.3'
-let g:rsenseUseOmniFunc = 1
 
 " --------------------------------
 " neocomplete.vim
@@ -44,6 +17,7 @@ let g:rsenseUseOmniFunc = 1
 "   let g:neocomplete#force_omni_input_patterns = {}
 " endif
 " let g:neocomplete#force_omni_input_patterns.ruby =  '[^.*\t]\.\w*\|\h\w*::'
+
 " --------------------------------
 " rubocop
 " --------------------------------
@@ -55,41 +29,11 @@ let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_slim_checkers = ['slim_lint']
 
-""""""""""""""""""""""""""""""
-"im_control
-"日本語入力周り (input japanese)
-""""""""""""""""""""""""""""""
-" 「日本語入力固定モード」切替キー
-"inoremap <silent> <C-j> <C-r>=IMState('FixMode')<CR>
-" PythonによるIBus制御指定
-"let IM_CtrlIBusPython = 1
-"バッファ毎に日本語入力固定モードの状態を制御。
-"let g:IM_CtrlBufLocalMode = 1
-
-"function! ImInActivate()
-"  call system('fcitx-remote -c')
-"endfunction
-"inoremap <silent> <ESC> :call ImInActivate()<CR>
-
-"""""""""""""""""""""""""""""
-
-
 augroup highlightIdegraphicSpace
   autocmd!
   autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
   autocmd VimEnter,WinEnter * match IdeographicSpace /　/
 augroup END
-
-""augroup highlightOptionSpace
-""  autocmd!
-""  autocmd Colorscheme * highlight OptionSpace term=underline ctermbg=DarkBlue guibg=DarkBlue
-""  autocmd VimEnter,WinEnter * match OptionSpace / /
-""augroup END
-
-"タブ2文字分
-""set tabstop=2
-""set softtabstop=2
-""set shiftwidth=2
 
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
@@ -117,16 +61,6 @@ if expand("%:t") =~ ".*\.erb"
   nnoremap er i<%  %><LEFT><LEFT><LEFT>
 endif
 
-""inoremap <expr> % Lt_Percent_Completion()
-""function Lt_Percent_Completion()
-""  if matchstr(getline('.'), '.', col('.') -1 ) == ">"
-""    return "\%\%\<Left>"
-""  else
-""    return "\%"
-""  end
-""endf
-
-
 "=======================================================
 " colorscheme
 " ------------------------------------------------------
@@ -140,13 +74,9 @@ highlight Comment ctermfg=225
 highlight String ctermfg=220
 highlight Visual ctermbg=240
 
-
-
 if filereadable(expand('~/.vim/.vimrc.script'))
   source ~/.vim/.vimrc.script
 endif
-
-
 
 if filereadable(expand('~/.vim/.vimrc.set'))
   source ~/.vim/.vimrc.set
