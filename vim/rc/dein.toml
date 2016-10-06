@@ -2,62 +2,32 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 # repo = 'tomasr/molokai'
-repo = 'nathanaelkane/vim-indent-guides'
-# コメントON/OFFを手軽に実行
-repo = 'tomtom/tcomment_vim'
 # ステータスバー
 repo = 'itchyny/lightline.vim'
 
+[[plugins]] # コメントON/OFFを手軽に実行
+repo = 'tomtom/tcomment_vim'
+
 [[plugins]] # カラースキーマ
 repo = 'tomasr/molokai'
+
+[[plugins]] # indent guides
+repo = 'nathanaelkane/vim-indent-guides'
 hook_add = '''
-
-"=======================================================
-" colorscheme
-" ------------------------------------------------------
-  syntax on
-  ""set background=dark
-  colorscheme molokai
-
-  highlight Normal ctermbg=none
-  highlight Comment ctermfg=225
-
-  "String default 144"
-  highlight String ctermfg=220
-  highlight Visual ctermbg=240
+  let g:indent_guides_enable_on_vim_startup=1
+  let g:indent_guides_start_level=2
+  let g:indent_guides_auto_colors=0
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=022
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=027
+  let g:indent_guides_color_change_percent = 30
+  let g:indent_guides_guide_size = 1
 '''
 
-# # git clone 後、実行すべきコマンドがある場合はこんな感じ
-# [[plugins]]
-# repo = 'Shougo/vimproc.vim'
-# hook_post_update = '''
-#   if dein#util#_is_windows()
-#     let cmd = 'tools\\update-dll-mingw'
-#   elseif dein#util#_is_cygwin()
-#     let cmd = 'make -f make_cygwin.mak'
-#   elseif executable('gmake')
-#     let cmd = 'gmake'
-#   else
-#     let cmd = 'make'
-#   endif
-#   let g:dein#plugin.build = cmd
-# '''
-#
-# # ブランチやタグを指定したいとき
-# [[plugins]]
-# repo = 'delphinus35/typescript-vim'
-# rev  = 'colorize-template-strings'
-#
-# # 特定の条件で読み込みたいとき
-# [[plugins]]
-# repo = 'elzr/vim-json'
-# if   = '''! has('kaoriya')'''
+[[plugins]] # カーソル位置のコンテキストに合わせてftを切り替える
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
 
-# # 依存関係を指定したいとき
-# [[plugins]]
-# repo    = 'vim-airline/vim-airline'
-# depends = ['vim-airline-themes']
+[[plugins]] # カーソル位置のコンテキストのftを判定するライブラリ
+repo = 'Shougo/context_filetype.vim'
 
-# # 依存関係を指定したからと言って、自動でインストールはされない（ここは NeoBundle と違う）
-# [[plugins]]
-# repo = 'vim-airline/vim-airline-themes'
+
