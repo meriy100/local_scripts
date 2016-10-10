@@ -97,3 +97,6 @@ set mouse=a
 " set ttymouse=xterm2
 
 set incsearch
+set nohlsearch
+
+set autoindent

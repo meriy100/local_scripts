@@ -23,4 +23,13 @@ let mapleader = "\<Space>"
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>e :e
+nnoremap <Leader>o :Unite buffer<CR>
+nnoremap <Leader>j" :vsplit<CR>
+nnoremap <Leader>j% :split<CR>
+nnoremap <Leader>jh <C-w>h<CR>
+nnoremap <Leader>jh <C-w>h<CR>
+nnoremap <Leader>jj <C-w>j<CR>
+nnoremap <Leader>jk <C-w>k<CR>
+nnoremap <Leader>jl <C-w>l<CR>
 

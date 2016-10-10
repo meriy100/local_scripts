@@ -2,11 +2,6 @@ if filereadable(expand('~/.vim/.vimrc.dein'))
   source ~/.vim/.vimrc.dein
 endif
 
-""""""""""""""""""""""""""""""
-"Unit.vimの設定
-""""""""""""""""""""""""""""""
-noremap <C-P> :Unite buffer<CR>
-
 " --------------------------------
 " neocomplete.vim
 " --------------------------------
