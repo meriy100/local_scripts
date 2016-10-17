@@ -1,6 +1,16 @@
 #!/usr/bin/env ruby
 
+require 'rbconfig'
+
 INSTALLER_PATH = (ENV["INSTALLER_PATH"] || "#{ENV['HOME']}/dotfiles/installer/").dup
+
+PRATFORM = case RUBY_PLATFORM
+           when /darwin/
+             "OSX"
+           else
+              puts "unknown platform"
+              exit -1
+           end
 
 def system!(*args)
   system(*args) || abort("\n== Command #{args} failed ==")
@@ -9,7 +19,7 @@ end
 def new(target)
   installer_path = "#{INSTALLER_PATH}#{target}/"
   system!("mkdir #{installer_path}")
-  installer_path.concat("OSX")
+  installer_path.concat(PRATFORM)
   system!("touch #{installer_path}")
   system!("chmod +x #{installer_path}")
 
@@ -21,14 +31,14 @@ end
 
 def edit(target)
   installer_path = "#{INSTALLER_PATH}#{target}/"
-  installer_path.concat("OSX")
+  installer_path.concat(PRATFORM)
   system!("#{ENV['EDITOR']} #{installer_path}")
   puts "edit #{installer_path}"
 end
 
 def install(target)
   installer_path = "#{INSTALLER_PATH}#{target}/"
-  installer_path.concat("OSX")
+  installer_path.concat(PRATFORM)
   system!(installer_path)
 end
 
