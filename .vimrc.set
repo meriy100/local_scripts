@@ -100,3 +100,4 @@ set incsearch
 set nohlsearch
 
 set autoindent
+set wildmenu

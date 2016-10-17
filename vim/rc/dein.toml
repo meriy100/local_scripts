@@ -15,16 +15,21 @@ repo = 'tomasr/molokai'
 repo = 'tpope/vim-surround'
 
 [[plugins]] # indent guides
-repo = 'nathanaelkane/vim-indent-guides'
+repo = 'Yggdroot/indentLine'
 hook_add = '''
-  let g:indent_guides_enable_on_vim_startup=1
-  let g:indent_guides_start_level=2
-  let g:indent_guides_auto_colors=0
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=022
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=027
-  let g:indent_guides_color_change_percent = 30
-  let g:indent_guides_guide_size = 1
+  let g:indentLine_faster = 1
 '''
+# [[plugins]] # indent guides
+# repo = 'nathanaelkane/vim-indent-guides'
+# hook_add = '''
+#   let g:indent_guides_enable_on_vim_startup=1
+#   let g:indent_guides_start_level=2
+#   let g:indent_guides_auto_colors=0
+#   autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=022
+#   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=027
+#   let g:indent_guides_color_change_percent = 30
+#   let g:indent_guides_guide_size = 1
+# '''
 
 [[plugins]] # カーソル位置のコンテキストに合わせてftを切り替える
 repo = 'osyo-manga/vim-precious'
