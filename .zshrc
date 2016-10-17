@@ -190,3 +190,6 @@ function cdu() {
 
 # neovim config
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# installer path
+export INSTALLER_PATH="$HOME/dotfiles/installer/"
