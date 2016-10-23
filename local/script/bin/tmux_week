@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require "date"
+
+if Date.today.wday == ARGV.first
+  exit 0
+else
+  exit -1
+end
