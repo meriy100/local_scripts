@@ -2,8 +2,57 @@
 
 require "date"
 
-if Date.today.wday == ARGV.first
-  exit 0
-else
-  exit -1
-end
+color_pallet = {
+  blue: {
+    base: 25,
+    light: 33,
+    sub: 208,
+    left: 38,
+    white: 195,
+  },
+  red: {
+    base: 124,
+    light: 196,
+    sub: 68,
+    left: 160,
+    white: 181,
+  },
+  orenge: {
+    base: 166,
+    light: 172,
+    sub: 28,
+    left: 208,
+    white: 181,
+  },
+  grean: {
+    base: 28,
+    light: 72,
+    sub: 226,
+    left: 48,
+    white: 22,
+  },
+}
+
+colors = case Date.today.wday
+         when 0
+           color_pallet[:blue]
+         when 1
+           color_pallet[:orenge]
+         when 2
+           color_pallet[:red]
+         when 3
+           color_pallet[:blue]
+         when 4
+           color_pallet[:grean]
+         when 5
+           color_pallet[:orenge]
+         when 6
+           color_pallet[:blue]
+         end
+
+system("tmux set-option -g status-bg colour#{colors[:base]}")
+system("tmux set-window-option -g window-status-fg colour#{colors[:white]}")
+system("tmux set-window-option -g window-status-format '#[fg=colour#{colors[:white]}, bg=colour#{colors[:light]}] #I: #W#F #[default]'")
+system("tmux set-window-option -g window-status-current-format '#[fg=colour#{colors[:white]}, bg=colour#{colors[:sub]}, bold] #I: #W#F #[default]'")
+system("tmux set-option -g pane-active-border-bg colour#{colors[:base]}")
+system("tmux set-option -g status-left '#[fg=colour#{colors[:white]}, bg=colour#{colors[:left]}, bold] #S #[default]'")
