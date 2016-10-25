@@ -31,6 +31,13 @@ color_pallet = {
     left: 48,
     white: 22,
   },
+  grey: {
+    base: 17,
+    light: 240,
+    sub: 99,
+    left: 244,
+    white: 189,
+  }
 }
 
 colors = case Date.today.wday
@@ -47,7 +54,7 @@ colors = case Date.today.wday
          when 5
            color_pallet[:orenge]
          when 6
-           color_pallet[:blue]
+           color_pallet[:grey]
          end
 
 system("tmux set-option -g status-bg colour#{colors[:base]}")
