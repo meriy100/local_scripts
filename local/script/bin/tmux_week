@@ -31,6 +31,13 @@ color_pallet = {
     left: 48,
     white: 22,
   },
+  yellow: {
+    base: 142,
+    light: 226,
+    sub: 198,
+    left: 190,
+    white: 22,
+  },
   grey: {
     base: 17,
     light: 240,
@@ -52,7 +59,7 @@ colors = case Date.today.wday
          when 4
            color_pallet[:grean]
          when 5
-           color_pallet[:orenge]
+           color_pallet[:yellow]
          when 6
            color_pallet[:grey]
          end
