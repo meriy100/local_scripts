@@ -31,12 +31,12 @@ hook_add = '''
 #   let g:indent_guides_guide_size = 1
 # '''
 
-[[plugins]] # カーソル位置のコンテキストに合わせてftを切り替える
-repo = 'osyo-manga/vim-precious'
-depends = ['context_filetype.vim']
-
-[[plugins]] # カーソル位置のコンテキストのftを判定するライブラリ
-repo = 'Shougo/context_filetype.vim'
+# [[plugins]] # カーソル位置のコンテキストに合わせてftを切り替える
+# repo = 'osyo-manga/vim-precious'
+# depends = ['context_filetype.vim']
+#
+# [[plugins]] # カーソル位置のコンテキストのftを判定するライブラリ
+# repo = 'Shougo/context_filetype.vim'
 
 
 [[plugins]] #  Git 差分とか

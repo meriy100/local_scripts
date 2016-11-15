@@ -4,11 +4,36 @@
 
 export TERM=xterm-256color
 ## 履歴の保存先
-HISTFILE=$HOME/.zsh-history
+export HISTFILE=$HOME/.zsh-history
 ## メモリに展開する履歴の数
-HISTSIZE=1000000
+export HISTSIZE=1000000
 ## 保存する履歴の数
-SAVEHIST=1000000
+export SAVEHIST=1000000
+# 重複を記録しない
+setopt hist_ignore_dups
+# ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
+setopt hist_ignore_all_dups
+# スペースで始まるコマンド行はヒストリリストから削除
+setopt hist_ignore_space
+# ヒストリを呼び出してから実行する間に一旦編集可能
+setopt hist_verify
+# 余分な空白は詰めて記録
+setopt hist_reduce_blanks
+# 古いコマンドと同じものは無視
+setopt hist_save_no_dups
+# historyコマンドは履歴に登録しない
+setopt hist_no_store
+# 補完時にヒストリを自動的に展開
+setopt hist_expand
+# 履歴をインクリメンタルに追加
+setopt inc_append_history
+
+## 履歴検索機能のショートカット設定(複数行履歴への対応)
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
 
 ## 補完機能の強化
 autoload -U compinit
@@ -104,12 +129,6 @@ PROMPT="%{${fg[blue]}%}%B[%n@%m]%b%{${reset_color}%}%{${fg[green]}%}%~%{${reset_
 #SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 #RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 
-## 履歴検索機能のショートカット設定(複数行履歴への対応)
-autoload history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^p" history-beginning-search-backward-end
-bindkey "^n" history-beginning-search-forward-end
 
 ##rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
