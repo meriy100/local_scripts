@@ -69,6 +69,10 @@ highlight Comment ctermfg=225
 highlight String ctermfg=220
 highlight Visual ctermbg=240
 
+autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
+autocmd BufNewFile,BufRead Guardfile  set filetype=ruby
+autocmd BufNewFile,BufRead .pryrc     set filetype=ruby
+
 if filereadable(expand('~/.vim/.vimrc.script'))
   source ~/.vim/.vimrc.script
 endif
@@ -80,3 +84,4 @@ endif
 if filereadable(expand('~/.vim/.vimrc.keymap'))
   source ~/.vim/.vimrc.keymap
 endif
+

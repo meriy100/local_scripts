@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 branch_names = ` git branch`.split("\n")
-branch_names.select { |branch_name| branch_name =~ /feature/ }.reject{ |branch_name| branch_name =~ /^\*/ }.each do |branch_name|
+branch_names.select { |branch_name| branch_name =~ /[feature|meriy100]/ }.reject{ |branch_name| branch_name =~ /^\*/ }.each do |branch_name|
   puts "\u001b[31m#{branch_name}\u001b[0m"
   system(" git branch #{ARGV.first || '-d'} #{branch_name}")
 end
