@@ -25,6 +25,8 @@ nnoremap <Leader>jl <C-w>l<CR>
 
 nnoremap <Leader>i :Unite buffer<CR>
 
+nnoremap <Leader>o :CtrlP<CR>
+
 let g:run_rspec_bin = 'spring rspec'
 nnoremap <Leader>r :RunSpec<CR>
 
@@ -147,3 +149,25 @@ autocmd BufNewFile,BufRead .pryrc     set filetype=ruby
 
 " 保存時に行末の空白を除去する
 autocmd BufWritePre * :%s/\s\+$//ge
+
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'passive_filetypes':    ['ruby', 'scss', 'slim'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+
+let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_slim_checkers = ['slim_lint']
+
+
+"全角スペースをハイライト表示
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
+endfunction
+
+if has('syntax')
+    augroup ZenkakuSpace
+        autocmd!
+        autocmd ColorScheme       * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+    augroup END
+    call ZenkakuSpace()
+endif
