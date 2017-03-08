@@ -14,12 +14,6 @@ repo = 'tpope/vim-surround'
 [[plugins]] # indent guides
 repo = 'Yggdroot/indentLine'
 
-# [[plugins]] #  Git 差分とか
-# repo = 'tpope/vim-fugitive'
-
-# [[plugins]] #  Git 差分とか
-# repe = 'airblade/vim-gitgutter'
-
 [[plugins]] # 色のプレビュー
 repo = 'lilydjwg/colorizer'
 
@@ -31,3 +25,8 @@ repo = 'jdkanani/vim-material-theme'
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
+
+[[plugins]] #  Git 差分とか
+repo = 'tpope/vim-fugitive'
+[[plugins]] #  Git 差分とか
+repo = 'airblade/vim-gitgutter'
