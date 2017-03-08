@@ -106,3 +106,28 @@ set nohlsearch
 
 set autoindent
 set wildmenu
+
+" () {} などの補完
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+vnoremap { "zdi^V{<C-R>z}<ESC>
+vnoremap [ "zdi^V[<C-R>z]<ESC>
+vnoremap ( "zdi^V(<C-R>z)<ESC>
+vnoremap " "zdi^V"<C-R>z^V"<ESC>
+vnoremap ' "zdi'<C-R>z'<ESC>
+
+
+"=======================================================
+" colorscheme
+" ------------------------------------------------------
+syntax on
+set background=dark
+colorscheme material-theme 
+
+
+autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
+autocmd BufNewFile,BufRead Guardfile  set filetype=ruby
+autocmd BufNewFile,BufRead .pryrc     set filetype=ruby
