@@ -2,7 +2,7 @@ if &compatible
   set nocompatible
 endif
 
-let s:dein_dir = expand(join([$XDG_CONFIG_HOME, "/nvim/dein"], ""))
+let s:dein_dir = expand("~/.config/nvim/dein")
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 if !isdirectory(s:dein_repo_dir)
@@ -14,7 +14,7 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
   " 管理するプラグインを記述したファイル
-  let g:rc_dir    = expand(join([$XDG_CONFIG_HOME, '/nvim/rc'], ''))
+  let g:rc_dir    = expand('~/.config/nvim/rc')
   let s:toml      = g:rc_dir . '/dein.toml'
   let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
