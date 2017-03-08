@@ -23,6 +23,20 @@ nnoremap <Leader>jj <C-w>j<CR>
 nnoremap <Leader>jk <C-w>k<CR>
 nnoremap <Leader>jl <C-w>l<CR>
 
+nnoremap <Leader>i :Unite buffer<CR>
+
+let g:run_rspec_bin = 'spring rspec'
+nnoremap <Leader>r :RunSpec<CR>
+
+nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
+nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
+
+nnoremap <silent> gff :Gdiff<CR>
+
+nnoremap m :SyntasticCheck<CR>
+
+nnoremap<silent>eo :NERDTreeToggle<CR>
+
 set clipboard+=unnamedplus
 
 "title を表示
@@ -125,9 +139,11 @@ vnoremap ' "zdi'<C-R>z'<ESC>
 " ------------------------------------------------------
 syntax on
 set background=dark
-colorscheme material-theme 
-
+colorscheme material-theme
 
 autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead Guardfile  set filetype=ruby
 autocmd BufNewFile,BufRead .pryrc     set filetype=ruby
+
+" 保存時に行末の空白を除去する
+autocmd BufWritePre * :%s/\s\+$//ge

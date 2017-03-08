@@ -20,7 +20,7 @@ hook_add = '''
 repo = 'tpope/vim-fugitive'
 
 [[plugins]] #  Git 差分とか
-repo = 'airblade/vim-gitgutter'
+repe = 'airblade/vim-gitgutter'
 
 [[plugins]] # 色のプレビュー
 repo = 'lilydjwg/colorizer'
