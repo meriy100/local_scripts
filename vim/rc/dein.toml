@@ -50,3 +50,11 @@ repo = 'lilydjwg/colorizer'
 
 [[plugins]] # 自動で閉じる
 repo = 'tpope/vim-endwise'
+
+[[plugins]] # ファイルインクリメントサーチ
+repo = 'wincent/command-t'
+hook_add = '''
+  let s:commandTHeight=18
+  let g:CommandTMaxHeight=s:commandTHeight
+  let g:CommandTMinHeight=s:commandTHeight
+'''

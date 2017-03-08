@@ -4,6 +4,10 @@ repo = 'tpope/vim-rails'
 on_ft = ['ruby']
 
 [[plugins]]
+repo = 'itmammoth/run-rspec.vim'
+on_ft= ['ruby']
+
+[[plugins]]
 repo  = 'Quramy/tsuquyomi'
 on_ft = ['typescript']
 
