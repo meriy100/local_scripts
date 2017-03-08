@@ -30,3 +30,4 @@ repo = 'ctrlpvim/ctrlp.vim'
 repo = 'tpope/vim-fugitive'
 [[plugins]] #  Git 差分とか
 repo = 'airblade/vim-gitgutter'
+
