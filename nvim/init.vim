@@ -1,3 +1,7 @@
+if filereadable(expand('~/.config/nvim/dein.vim'))
+  source ~/.config/nvim/dein.vim
+endif
+
 set termguicolors
 
 nmap 1 0
