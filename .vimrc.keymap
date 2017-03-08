@@ -5,27 +5,20 @@ imap <C-s> <Esc>:w!<CR>
 " imap <C-[> <Esc><CR>
 inoremap <silent> jj <ESC>
 
-nnoremap m :SyntasticCheck<CR>
-
-nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
-nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 
 " 0, 9で行頭、行末へ
 nmap 1 0
 nmap 0 ^
 nmap 9 $
 
-nnoremap <silent> gff :Gdiff<CR>
 nnoremap ; :
 
-nnoremap<silent>eo :NERDTreeToggle<CR>
 
 let mapleader = "\<Space>"
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>e :e
-nnoremap <Leader>i :Unite buffer<CR>
 nnoremap <Leader>j% :vsplit<CR>
 nnoremap <Leader>j" :split<CR>
 nnoremap <Leader>jh <C-w>h<CR>
@@ -33,6 +26,8 @@ nnoremap <Leader>jh <C-w>h<CR>
 nnoremap <Leader>jj <C-w>j<CR>
 nnoremap <Leader>jk <C-w>k<CR>
 nnoremap <Leader>jl <C-w>l<CR>
+
+nnoremap <Leader>i :Unite buffer<CR>
 
 " Command-T "
 " let g:CommandTMatchWindowAtTop=1
@@ -49,3 +44,12 @@ nnoremap <Leader>o :CommandT ./<CR>
 " let g:run_rspec_bin = 'bundle exec rspec'
 let g:run_rspec_bin = 'spring rspec'
 nnoremap <Leader>r :RunSpec<CR>
+
+nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
+nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
+
+nnoremap <silent> gff :Gdiff<CR>
+
+nnoremap m :SyntasticCheck<CR>
+
+nnoremap<silent>eo :NERDTreeToggle<CR>
