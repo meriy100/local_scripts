@@ -36,3 +36,10 @@ repo = 'neomake/neomake'
 hook_add = '''
 autocmd! BufWritePost * Neomake
 '''
+
+[[plugins]]
+repo = 'simeji/winresizer'
+hook_add = '''
+let g:winresizer_vert_resize=3
+let g:winresizer_horiz_resize=1
+'''
