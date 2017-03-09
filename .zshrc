@@ -173,7 +173,7 @@ stty -ixon -ixoff
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 
-export EDITOR=vim        # エディタをvimに設定
+export EDITOR=nvim        # エディタをvimに設定
 ##android studio
 # export PATH="$HOME/android-studio/bin/:$PATH"
 # function git(){hub "$@"} # zsh
