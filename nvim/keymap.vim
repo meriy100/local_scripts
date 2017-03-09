@@ -22,7 +22,7 @@ nnoremap <Leader>i :Unite buffer<CR>
 nnoremap <Leader>o :CtrlP<CR>
 
 let g:run_rspec_bin = 'spring rspec'
-nnoremap <Leader>r :RunSpec<CR>
+nnoremap <Leader>r :RunSpecLine<CR>
 
 nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
 nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>

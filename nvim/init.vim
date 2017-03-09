@@ -18,6 +18,9 @@ if filereadable(expand('~/.config/nvim/ctrlp.vim'))
   source ~/.config/nvim/ctrlp.vim
 endif
 
+if filereadable(expand('~/.config/nvim/lightline.vim'))
+  source ~/.config/nvim/lightline.vim
+endif
 
 " クリップボード
 set clipboard+=unnamedplus
@@ -69,22 +72,21 @@ set termencoding=utf-8
 "backspace で改行、インデント、以前入力した文字を削除できるようにする
 set backspace=indent,eol,start
 
-"ステータスラインの表示
-set laststatus=2
-let g:lightline = {
-      \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
-      \ },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
-
-
 " 文頭や文末で左右に動いたら次の行や前の行にいけるようにする
 set whichwrap=b,s,h,l,<,>,[,]
 
 " タブ文字とか半角とか色々を可視化
 set list
 set lcs=tab:>.,trail:_,extends:\
+
+set autoread   " 外部でファイルに変更がされた場合は読みなおす
+
+augroup vimrc-checktime "window移動/一定時間カーソルが停止した場合に強制的に読みなおす
+  autocmd!
+  set updatetime=400
+  autocmd WinEnter * checktime
+  autocmd CursorHold * checktime
+augroup END
 
 set clipboard+=unnamed
 
@@ -122,3 +124,15 @@ autocmd BufNewFile,BufRead .pryrc     set filetype=ruby
 
 " 保存時に行末の空白を除去する
 autocmd BufWritePre * :%s/\s\+$//ge
+
+" カーソル形状変化
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+" 日本語ヘルプを利用する
+set helplang=ja,en
