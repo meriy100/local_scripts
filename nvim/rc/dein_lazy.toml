@@ -46,10 +46,6 @@ repo = 'othree/yajs.vim'
 on_ft = ['javascript', 'jsx']
 
 [[plugins]]
-repo = 'scrooloose/syntastic'
-on_cmd    = ['SyntasticCheck']
-
-[[plugins]]
 repo   = 'Shougo/unite.vim'
 on_cmd = ["Unite"]
 

@@ -2,43 +2,24 @@ if filereadable(expand('~/.config/nvim/dein.vim'))
   source ~/.config/nvim/dein.vim
 endif
 
-set termguicolors
+if filereadable(expand('~/.config/nvim/keymap.vim'))
+  source ~/.config/nvim/keymap.vim
+endif
 
-nmap 1 0
-nmap 0 ^
-nmap 9 $
+if filereadable(expand('~/.config/nvim/terminal.vim'))
+  source ~/.config/nvim/terminal.vim
+endif
 
-inoremap <silent> jj <ESC>
+if filereadable(expand('~/.config/nvim/color.vim'))
+  source ~/.config/nvim/color.vim
+endif
 
-nnoremap ; :
+if filereadable(expand('~/.config/nvim/ctrlp.vim'))
+  source ~/.config/nvim/ctrlp.vim
+endif
 
-let mapleader = "\<Space>"
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>j% :vsplit<CR>
-nnoremap <Leader>j" :split<CR>
-nnoremap <Leader>jh <C-w>h<CR>
-nnoremap <Leader>jh <C-w>h<CR>
-nnoremap <Leader>jj <C-w>j<CR>
-nnoremap <Leader>jk <C-w>k<CR>
-nnoremap <Leader>jl <C-w>l<CR>
 
-nnoremap <Leader>i :Unite buffer<CR>
-
-nnoremap <Leader>o :CtrlP<CR>
-
-let g:run_rspec_bin = 'spring rspec'
-nnoremap <Leader>r :RunSpec<CR>
-
-nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
-nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
-
-nnoremap <silent> gff :Gdiff<CR>
-
-nnoremap m :SyntasticCheck<CR>
-
-nnoremap<silent>eo :NERDTreeToggle<CR>
-
+" クリップボード
 set clipboard+=unnamedplus
 
 "title を表示
@@ -135,47 +116,9 @@ vnoremap ( "zdi^V(<C-R>z)<ESC>
 vnoremap " "zdi^V"<C-R>z^V"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
 
-
-"=======================================================
-" colorscheme
-" ------------------------------------------------------
-syntax on
-set background=dark
-colorscheme material-theme
-
 autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead Guardfile  set filetype=ruby
 autocmd BufNewFile,BufRead .pryrc     set filetype=ruby
 
 " 保存時に行末の空白を除去する
 autocmd BufWritePre * :%s/\s\+$//ge
-
-
-let g:syntastic_mode_map = { 'mode': 'passive', 'passive_filetypes':    ['ruby', 'scss', 'slim'] }
-let g:syntastic_ruby_checkers = ['rubocop']
-
-let g:syntastic_scss_checkers = ['scss_lint']
-let g:syntastic_slim_checkers = ['slim_lint']
-
-
-"全角スペースをハイライト表示
-function! ZenkakuSpace()
-    highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
-endfunction
-
-if has('syntax')
-    augroup ZenkakuSpace
-        autocmd!
-        autocmd ColorScheme       * call ZenkakuSpace()
-        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
-    augroup END
-    call ZenkakuSpace()
-endif
-
-let g:ctrlp_map = '<Nop>'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-"""" Terminal
-nnoremap <Leader>t :terminal
-tnoremap  <silent> jj <C-\><C-n>

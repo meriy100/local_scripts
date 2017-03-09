@@ -31,3 +31,8 @@ repo = 'tpope/vim-fugitive'
 [[plugins]] #  Git 差分とか
 repo = 'airblade/vim-gitgutter'
 
+[[plugins]]
+repo = 'neomake/neomake'
+hook_add = '''
+autocmd! BufWritePost * Neomake
+'''
