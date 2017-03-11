@@ -23,12 +23,13 @@ nnoremap <Leader>o :CtrlP<CR>
 
 let g:run_rspec_bin = 'spring rspec'
 nnoremap <Leader>r :RunSpecLine<CR>
+nnoremap <Leader>re :RunSpec<CR>
 
 nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
 nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 
 nnoremap <silent> gff :Gdiff<CR>
 
-nnoremap m :SyntasticCheck<CR>
+" nnoremap m :SyntasticCheck<CR>
 
 nnoremap<silent>eo :NERDTreeToggle<CR>
