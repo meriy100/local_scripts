@@ -49,3 +49,13 @@ let g:winresizer_horiz_resize=1
 repo = 'Shougo/deoplete.nvim'
 [[plugins]]
 repo = 'fishbullet/deoplete-ruby'
+
+[[plugins]]
+repo = 'rhysd/clever-f.vim'
+
+[[plugins]]
+repo = 'vim-scripts/vim-auto-save'
+hook_add = '''
+let g:auto_save = 1
+'''
+
