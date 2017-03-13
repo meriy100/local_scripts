@@ -37,13 +37,13 @@ hook_add = '''
 autocmd! BufWritePost * Neomake
 '''
 
-# window resize
-# [[plugins]]
-# repo = 'simeji/winresizer'
-# hook_add = '''
-# let g:winresizer_vert_resize=3
-# let g:winresizer_horiz_resize=1
-# '''
+# Window Resize
+[[plugins]]
+repo = 'simeji/winresizer'
+hook_add = '''
+let g:winresizer_vert_resize=3
+let g:winresizer_horiz_resize=1
+'''
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
