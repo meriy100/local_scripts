@@ -22,6 +22,10 @@ if filereadable(expand('~/.config/nvim/lightline.vim'))
   source ~/.config/nvim/lightline.vim
 endif
 
+if filereadable(expand('~/.config/nvim/deoplete.rc.vim'))
+  source ~/.config/nvim/deoplete.rc.vim
+endif
+
 " クリップボード
 set clipboard+=unnamedplus
 
