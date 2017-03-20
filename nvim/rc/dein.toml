@@ -24,6 +24,9 @@ repo = 'tpope/vim-endwise'
 repo = 'jdkanani/vim-material-theme'
 
 [[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]] #  Git 差分とか
@@ -35,6 +38,7 @@ repo = 'airblade/vim-gitgutter'
 repo = 'neomake/neomake'
 hook_add = '''
 autocmd! BufWritePost * Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
 '''
 
 # Window Resize
@@ -53,9 +57,9 @@ repo = 'fishbullet/deoplete-ruby'
 [[plugins]]
 repo = 'rhysd/clever-f.vim'
 
-[[plugins]]
-repo = 'vim-scripts/vim-auto-save'
-hook_add = '''
-let g:auto_save = 1
-'''
+# [[plugins]]
+# repo = 'vim-scripts/vim-auto-save'
+# hook_add = '''
+# let g:auto_save = 1
+# '''
 
