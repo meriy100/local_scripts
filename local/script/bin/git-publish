@@ -1,9 +1,10 @@
 #!/usr/bin/env ruby
 
-branch_name = `git rev-parse --abbrev-ref HEAD`
+branch_name = `git rev-parse --abbrev-ref HEAD`.chomp
 ignore_branchs = %w(master develop)
 if ignore_branchs.include? branch_name
+  print "current branch is #{branch_name} [y|n]"
   yon =  gets
-  return unless yon == 'y'
+  exit unless yon.match('y')
 end
 system("git push origin #{ARGV.join(" ")} #{branch_name}")
