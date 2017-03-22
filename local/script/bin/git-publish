@@ -1,4 +1,9 @@
 #!/usr/bin/env ruby
 
 branch_name = `git rev-parse --abbrev-ref HEAD`
+ignore_branchs = %w(master develop)
+if ignore_branchs.include? branch_name
+  yon =  gets
+  return unless yon == 'y'
+end
 system("git push origin #{ARGV.join(" ")} #{branch_name}")
