@@ -25,6 +25,10 @@ repo = "slim-template/vim-slim"
 on_ft = ['slim']
 
 [[plugins]]
+repo = 'dag/vim2hs'
+on_ft = ['haskell']
+
+[[plugins]]
 repo = 'plasticboy/vim-markdown'
 on_ft = ['markdown']
 hook_add = '''

@@ -39,6 +39,12 @@ repo = 'neomake/neomake'
 hook_add = '''
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
+augroup my_neomake_signs
+    au!
+    autocmd ColorScheme *
+        \ hi NeomakeErrorSign ctermfg=white |
+        \ hi NeomakeWarningSign ctermfg=yellow
+augroup END
 '''
 
 # Window Resize
@@ -63,3 +69,5 @@ repo = 'rhysd/clever-f.vim'
 # let g:auto_save = 1
 # '''
 
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
