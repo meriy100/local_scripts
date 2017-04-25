@@ -39,6 +39,7 @@ repo = 'neomake/neomake'
 hook_add = '''
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_ruby_enabled_makers = ['mri','rubocop']
 augroup my_neomake_signs
     au!
     autocmd ColorScheme *
