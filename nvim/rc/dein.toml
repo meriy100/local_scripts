@@ -27,6 +27,9 @@ repo = 'jdkanani/vim-material-theme'
 repo = 'tomasr/molokai'
 
 [[plugins]]
+repo = 'vim-scripts/ChocolateLiquor'
+
+[[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]] #  Git 差分とか
