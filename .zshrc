@@ -214,7 +214,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export INSTALLER_PATH="$HOME/dotfiles/installer/"
 
 if [ -x "`which go`" ]; then
-    export GOROOT=`go env GOROOT`
+    export GOROOT=/usr/local/Cellar/go/1.8.1/libexec
     export GOPATH=$HOME/go
     export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
@@ -234,3 +234,14 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^o' peco-src
+
+
+
+
+
+### Haskell stack
+export PATH="$HOME/.local/bin:$PATH"
+# alias ghc="stack ghc"
+# alias ghci="stack ghci"
+# alias runghc="stack runghc"
+# alias runhaskell="stack runghc"

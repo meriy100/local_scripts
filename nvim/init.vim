@@ -54,9 +54,9 @@ if expand("%:t") =~ ".*\.java"
   set shiftwidth=4
 elseif expand("%:t") =~ ".*\.go"
   set noexpandtab
-  set tabstop=2
+  set tabstop=4
+  set shiftwidth=4
   set softtabstop=2
-  set shiftwidth=2
 else
   "タブ2文字分
   set tabstop=2
