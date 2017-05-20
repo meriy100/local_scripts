@@ -44,7 +44,7 @@ autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_ruby_enabled_makers = ['mri','rubocop']
 let g:neomake_haskell_enabled_makers = ['ghcmod', 'hlint' ]
-
+let g:neomake_typescript_enabled_makers = ['tslint']
 
 augroup my_neomake_signs
     au!

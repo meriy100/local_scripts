@@ -13,8 +13,22 @@ repo = 'meriy100/run-rspec.vim'
 on_ft= ['ruby']
 
 [[plugins]]
-repo  = 'Quramy/tsuquyomi'
+repo = 'leafgarland/typescript-vim'
 on_ft = ['typescript']
+
+[[plugins]]
+repo = 'jason0x43/vim-js-indent'
+on_ft = ['typescript']
+hook_add = '''
+let g:js_indent_typescript = 1
+'''
+
+[[plugins]]
+repo = 'mhartington/nvim-typescript'
+on_ft = ['typescript']
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+'''
 
 [[plugins]] # Swift のハイライト
 repo = "kballard/vim-swift"
@@ -83,3 +97,10 @@ repo = 'mattn/webapi-vim'
 repo = 'moznion/hateblo.vim'
 on_source = ['webapi-vim']
 
+[[plugins]]
+repo = 'ujihisa/neco-ghc'
+on_ft = ['haskell']
+hook_add = '''
+let g:necoghc_enable_detailed_browse = 1
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+'''
