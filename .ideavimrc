@@ -1,0 +1,18 @@
+nmap 1 0
+nmap 0 ^
+nmap 9 $
+
+inoremap <silent> jj <ESC>
+
+nnoremap ; :
+
+let mapleader = "\<Space>"
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>j% :vsplit<CR>
+nnoremap <Leader>j" :split<CR>
+nnoremap <Leader>jh <C-w>h<CR>
+nnoremap <Leader>jh <C-w>h<CR>
+nnoremap <Leader>jj <C-w>j<CR>
+nnoremap <Leader>jk <C-w>k<CR>
+nnoremap <Leader>jl <C-w>l<CR>

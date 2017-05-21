@@ -21,3 +21,8 @@ ln -sf ~/dotfiles/vim/rc/dein_lazy.toml ~/.vim/rc/dein_lazy.toml
 
 mkdir -p ~/local
 ln -sf ~/dotfiles/local/script ~/local/
+
+
+
+# RubyMine
+ln -sf ~/dotfiles/.ideavimrc ~/.ideavimrc
