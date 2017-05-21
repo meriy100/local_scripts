@@ -26,3 +26,6 @@ ln -sf ~/dotfiles/local/script ~/local/
 
 # RubyMine
 ln -sf ~/dotfiles/.ideavimrc ~/.ideavimrc
+
+# tig
+ln -sf ~/dotfiles/.tigrc ~/.tigrc
