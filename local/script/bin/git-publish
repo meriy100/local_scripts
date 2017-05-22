@@ -4,7 +4,6 @@ branch_name = `git rev-parse --abbrev-ref HEAD`.chomp
 ignore_branchs = %w(master develop)
 if ignore_branchs.include? branch_name
   print "current branch is #{branch_name} [y|n]"
-  yon =  gets
-  exit unless yon.match('y')
+  exit unless STDIN.gets =~ /^y/
 end
-system("git push origin #{ARGV.join(" ")} #{branch_name}")
+system("git push origin #{ARGV.join(' ')} #{branch_name}")

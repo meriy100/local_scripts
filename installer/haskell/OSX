@@ -7,6 +7,6 @@
 # brew install haskell-platform
 # cabal install language-c
 
-brew install stack
+brew install haskell-stack
 stack setup
 stack install ghc-mod hspec hlint
