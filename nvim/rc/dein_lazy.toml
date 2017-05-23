@@ -45,6 +45,9 @@ on_ft = ['slim']
 [[plugins]]
 repo = 'dag/vim2hs'
 on_ft = ['haskell']
+hook_add = '''
+let g:haskell_conceal = 0
+'''
 
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
