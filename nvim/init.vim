@@ -140,3 +140,4 @@ endif
 
 " 日本語ヘルプを利用する
 set helplang=ja,en
+

@@ -34,3 +34,5 @@ function! s:get_syn_info()
         \ " guifg: " . linkedSyn.guifg .
         \ " guibg: " . linkedSyn.guibg
 endfunction
+
+command! SyntaxInfo call s:get_syn_info()

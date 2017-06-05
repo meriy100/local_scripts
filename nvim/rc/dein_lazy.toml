@@ -2,6 +2,9 @@
 [[plugins]]
 repo = 'tpope/vim-rails'
 on_ft = ['ruby']
+hook_add = '''
+autocmd  VimEnter * nested syn keyword rubyRailsTestMethod is_expected is_asserted_by
+'''
 
 [[plugins]]
 repo = 'vim-ruby/vim-ruby'
