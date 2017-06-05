@@ -1,8 +1,8 @@
 set termguicolors
 syntax on
 set background=dark
-colorscheme material-theme
-" colorscheme molokai
+" colorscheme material-theme
+colorscheme molokai
 
 "全角スペースをハイライト表示
 function! ZenkakuSpace()

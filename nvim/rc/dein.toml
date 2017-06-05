@@ -64,8 +64,7 @@ let g:winresizer_horiz_resize=1
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-[[plugins]]
-repo = 'fishbullet/deoplete-ruby'
+
 
 [[plugins]]
 repo = 'rhysd/clever-f.vim'
