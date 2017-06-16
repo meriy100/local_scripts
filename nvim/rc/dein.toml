@@ -32,6 +32,9 @@ repo = 'vim-scripts/ChocolateLiquor'
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
 
+[[plugins]]
+repo = 'vim-scripts/sudo.vim'
+
 [[plugins]] #  Git 差分とか
 repo = 'tpope/vim-fugitive'
 [[plugins]] #  Git 差分とか

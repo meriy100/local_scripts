@@ -237,7 +237,7 @@ bindkey '^o' peco-src
 
 ### git branch and peco
 function peco-src-git-branch () {
-  local selected_branch=$(git branch | peco --query "$LBUFFER")
+  local selected_branch=$(git branch | ruby -pe '$_.gsub!(/\*/, " ")' | peco --query "$LBUFFER")
   if [ -n "$selected_branch" ]; then
     BUFFER="git checkout ${selected_branch}"
     zle accept-line

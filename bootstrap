@@ -29,3 +29,6 @@ ln -sf ~/dotfiles/.ideavimrc ~/.ideavimrc
 
 # tig
 ln -sf ~/dotfiles/.tigrc ~/.tigrc
+
+# peco
+ln -sf ~/dotfiles/peco ~/.config/peco
