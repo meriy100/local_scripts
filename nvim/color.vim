@@ -2,6 +2,7 @@ set termguicolors
 syntax on
 set background=dark
 " colorscheme material-theme
+" colorscheme duotone-dark
 colorscheme molokai
 
 "全角スペースをハイライト表示

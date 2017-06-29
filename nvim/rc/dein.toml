@@ -27,6 +27,9 @@ repo = 'jdkanani/vim-material-theme'
 repo = 'tomasr/molokai'
 
 [[plugins]]
+repo = 'atelierbram/vim-colors_duotones'
+
+[[plugins]]
 repo = 'vim-scripts/ChocolateLiquor'
 
 [[plugins]]
