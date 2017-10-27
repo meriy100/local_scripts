@@ -9,8 +9,11 @@ export HISTFILE=$HOME/.zsh-history
 export HISTSIZE=1000000
 ## 保存する履歴の数
 export SAVEHIST=1000000
+## less のオプション
+export LESS='-g -i -M -R -S -W -z-4 -x4'
+export PAGER=less
 # 重複を記録しない
-setopt hist_ignore_dups
+setopt hist_ignore_all_dups
 # ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
 setopt hist_ignore_all_dups
 # スペースで始まるコマンド行はヒストリリストから削除
@@ -250,6 +253,7 @@ bindkey '^g' peco-src-git-branch
 
 
 
+# source ~/.bin/tmuxinator.zsh
 
 ### Haskell stack
 export PATH="$HOME/.local/bin:$PATH"

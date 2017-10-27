@@ -16,3 +16,5 @@ nnoremap <Leader>jh <C-w>h<CR>
 nnoremap <Leader>jj <C-w>j<CR>
 nnoremap <Leader>jk <C-w>k<CR>
 nnoremap <Leader>jl <C-w>l<CR>
+
+set clipboard=unnamed

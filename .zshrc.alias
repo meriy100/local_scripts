@@ -19,8 +19,10 @@ alias sourcedo='source ~/.zshrc'
 
 alias tmuxrw="tmux rename-window"
 alias tmuxrs="tmux rename-session"
-alias tmuxns="tmux new-session -s"
+alias tmuxns="tmux new -s"
+alias muxns="tmuxinator start"
 alias tmux="tmux -u"
+alias mux="tmuxinator"
 
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '

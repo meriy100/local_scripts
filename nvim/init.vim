@@ -85,6 +85,9 @@ set lcs=tab:>.,trail:_,extends:\
 
 set autoread   " 外部でファイルに変更がされた場合は読みなおす
 
+set modeline
+let g:tex_flavor = "latex"
+
 augroup vimrc-checktime "window移動/一定時間カーソルが停止した場合に強制的に読みなおす
   autocmd!
   set updatetime=400
@@ -141,3 +144,5 @@ endif
 " 日本語ヘルプを利用する
 set helplang=ja,en
 
+set ttimeout
+set ttimeoutlen=50

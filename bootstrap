@@ -32,3 +32,7 @@ ln -sf ~/dotfiles/.tigrc ~/.tigrc
 
 # peco
 ln -sf ~/dotfiles/peco ~/.config/peco
+
+# tmuxinator
+gem install tmuxinator
+ln -sf ~/dotfiles/tmuxinator ~/.config/tmuxinator

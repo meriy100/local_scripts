@@ -86,3 +86,4 @@ if filereadable(expand('~/.vim/.vimrc.keymap'))
   source ~/.vim/.vimrc.keymap
 endif
 
+set modeline

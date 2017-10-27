@@ -91,3 +91,9 @@ depends = ['context_filetype.vim']
 [[plugins]]
 repo = "Shougo/context_filetype.vim"
 
+[[plugins]]
+repo = 'thinca/vim-template'
+hook_add = '''
+let g:template_basedir = '~/.config/nvim'
+let g:template_free_pattern = 'templates'
+'''

@@ -64,6 +64,8 @@ colors = case Date.today.wday
            color_pallet[:grey]
          end
 
+
+system("tmux set-option -g status-fg colour#{colors[:white]}")
 system("tmux set-option -g status-bg colour#{colors[:base]}")
 system("tmux set-window-option -g window-status-fg colour#{colors[:white]}")
 system("tmux set-window-option -g window-status-format '#[fg=colour#{colors[:white]}, bg=colour#{colors[:light]}] #I: #W#F #[default]'")
