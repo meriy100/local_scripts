@@ -11,7 +11,7 @@ export HISTSIZE=1000000
 export SAVEHIST=1000000
 ## less のオプション
 export LESS='-g -i -M -R -S -W -z-4 -x4'
-export PAGER=less
+export PAGER='more -R'
 # 重複を記録しない
 setopt hist_ignore_all_dups
 # ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
