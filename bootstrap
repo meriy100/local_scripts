@@ -1,5 +1,8 @@
 #!/bin/sh
 
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
+
 mkdir -p ~/.vim/bundle
 # git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
@@ -23,6 +26,8 @@ mkdir -p ~/local
 ln -sf ~/dotfiles/local/script ~/local/
 
 
+# latexmkrc
+ln -sf ~/dotfiles/.latexmkrc ~/.latexmkrc
 
 # RubyMine
 ln -sf ~/dotfiles/.ideavimrc ~/.ideavimrc
@@ -36,3 +41,7 @@ ln -sf ~/dotfiles/peco ~/.config/peco
 # tmuxinator
 gem install tmuxinator
 ln -sf ~/dotfiles/tmuxinator ~/.config/tmuxinator
+
+# rubocop.yml
+gem install rubocop
+ln -sf ~/dotfiles/.rubocop.yml ~/.rubocop.yml

@@ -11,6 +11,7 @@ export HISTSIZE=1000000
 export SAVEHIST=1000000
 ## less のオプション
 export LESS='-g -i -M -R -S -W -z-4 -x4'
+export MORE='-g -i -M -R -S -W -z-4 -x4'
 export PAGER='more -R'
 # 重複を記録しない
 setopt hist_ignore_all_dups
@@ -249,6 +250,7 @@ function peco-src-git-branch () {
 }
 zle -N peco-src-git-branch
 bindkey '^g' peco-src-git-branch
+
 
 
 

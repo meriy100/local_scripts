@@ -44,4 +44,4 @@ root: ~/.ghq/github.com/NVT-TerminalQ/Client/
 
 windows:
   - server: npm start
-  - editor:
+  - editor: nvim

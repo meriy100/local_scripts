@@ -132,6 +132,7 @@ autocmd BufNewFile,BufRead .pryrc     set filetype=ruby
 " 保存時に行末の空白を除去する
 autocmd BufWritePre * :%s/\s\+$//ge
 
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 " カーソル形状変化
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"

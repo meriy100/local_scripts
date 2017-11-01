@@ -45,3 +45,8 @@ startup_window: editor
 windows:
   - server: bin/rails s
   - editor: nvim
+  - console:
+    layout: main-vertical
+    panes:
+      - git status
+      - bin/rails c
