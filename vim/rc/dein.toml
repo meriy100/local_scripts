@@ -17,6 +17,10 @@ repo = 'tpope/vim-surround'
 [[plugins]] # indent guides
 repo = 'Yggdroot/indentLine'
 hook_add = '''
+
+syntax on
+colorscheme molokai
+set background=dark
 '''
   # let g:indentLine_faster = 1
 

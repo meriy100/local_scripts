@@ -4,7 +4,7 @@ require "tempfile"
 
 def tempvim
   tmp = Tempfile.new "message"
-  system "vim #{tmp.path}"
+  system "nvim #{tmp.path}"
   STDOUT.puts tmp.path
 end
 

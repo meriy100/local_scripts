@@ -9,6 +9,7 @@ color_pallet = {
     sub: 208,
     left: 38,
     white: 195,
+    fg: 195,
   },
   red: {
     base: 124,
@@ -16,6 +17,7 @@ color_pallet = {
     sub: 68,
     left: 160,
     white: 181,
+    fg: 181,
   },
   orenge: {
     base: 166,
@@ -23,6 +25,7 @@ color_pallet = {
     sub: 28,
     left: 208,
     white: 181,
+    fg: 181,
   },
   grean: {
     base: 28,
@@ -30,6 +33,7 @@ color_pallet = {
     sub: 226,
     left: 48,
     white: 22,
+    fg: 158,
   },
   yellow: {
     base: 142,
@@ -37,6 +41,7 @@ color_pallet = {
     sub: 198,
     left: 190,
     white: 22,
+    fg: 22,
   },
   grey: {
     base: 17,
@@ -44,6 +49,7 @@ color_pallet = {
     sub: 99,
     left: 244,
     white: 189,
+    fg: 189,
   }
 }
 
@@ -65,7 +71,7 @@ colors = case Date.today.wday
          end
 
 
-system("tmux set-option -g status-fg colour#{colors[:white]}")
+system("tmux set-option -g status-fg colour#{colors[:fg]}")
 system("tmux set-option -g status-bg colour#{colors[:base]}")
 system("tmux set-window-option -g window-status-fg colour#{colors[:white]}")
 system("tmux set-window-option -g window-status-format '#[fg=colour#{colors[:white]}, bg=colour#{colors[:light]}] #I: #W#F #[default]'")

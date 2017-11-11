@@ -97,3 +97,9 @@ hook_add = '''
 let g:template_basedir = '~/.config/nvim'
 let g:template_free_pattern = 'templates'
 '''
+
+[[plugins]]
+repo='yuratomo/w3m.vim'
+hook_add = '''
+let g:w3m#command = 'w3m'
+'''

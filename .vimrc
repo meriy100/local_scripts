@@ -59,9 +59,6 @@ endif
 "=======================================================
 " colorscheme
 " ------------------------------------------------------
-syntax on
-colorscheme molokai
-set background=dark
 
 highlight Normal ctermbg=none
 highlight Comment ctermfg=225
