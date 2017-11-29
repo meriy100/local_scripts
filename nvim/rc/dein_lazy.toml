@@ -46,6 +46,10 @@ hook_add = '''
 let g:deoplete#enable_at_startup = 1
 '''
 
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+on_ft = ['dockerfile', 'docker-compose']
+
 [[plugins]] # Swift のハイライト
 repo = "kballard/vim-swift"
 on_ft = ['swift']

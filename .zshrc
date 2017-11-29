@@ -263,3 +263,5 @@ export PATH="$HOME/.local/bin:$PATH"
 # alias ghci="stack ghci"
 # alias runghc="stack runghc"
 # alias runhaskell="stack runghc"
+
+fpath=(~/.zsh/completion $fpath)

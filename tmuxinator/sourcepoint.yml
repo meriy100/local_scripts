@@ -44,6 +44,6 @@ root: ~/.ghq/github.com/meriy100/sourcepoint/
 
 windows:
   - server: bin/rails s
-  - editor:
+  - editor: nvim -c vs
   - database: cd ~/.ghq/github.com/meriy100/rpcs_database/
   - user-root: cd ~/

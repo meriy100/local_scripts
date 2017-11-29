@@ -45,3 +45,8 @@ ln -sf ~/dotfiles/tmuxinator ~/.config/tmuxinator
 # rubocop.yml
 gem install rubocop
 ln -sf ~/dotfiles/.rubocop.yml ~/.rubocop.yml
+
+# docker compose
+# https://docs.docker.com/compose/completion/#bash
+mkdir -p ~/.zsh/completion
+curl -L https://raw.githubusercontent.com/docker/compose/1.17.0/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose

@@ -1,8 +1,7 @@
-# ~/.tmuxinator/server.yml
+# ~/.tmuxinator/sourcepoint.yml
 
-name: server
-root: ~/.ghq/github.com/NVT-TerminalQ/tqDocker/Server/
-
+name: tex
+root: ~/subversion/kariyado/master_thesis/
 # Optional tmux socket
 # socket_name: foo
 
@@ -31,7 +30,7 @@ root: ~/.ghq/github.com/NVT-TerminalQ/tqDocker/Server/
 # tmux_command: byobu
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-startup_window: editor
+# startup_window: editor
 
 # Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
 # startup_pane: 1
@@ -40,9 +39,8 @@ startup_window: editor
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t server
+# post: tmux -CC attach -t sourcepoint
 
 windows:
-  - server: docker-compose up
-  - editor: nvim
-  - console:
+  - latexmk: /opt/homebrew-cask/Caskroom/skim/1.4.15/Skim.app/Contents/MacOS/Skim master.pdf & latexmk master.tex
+  - editor: nvim tex/master
