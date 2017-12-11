@@ -22,6 +22,8 @@ nnoremap <Leader>i :Unite buffer<CR>
 nnoremap <Leader>o :CtrlP<CR>
 
 let g:run_rspec_bin = 'spring rspec'
+" let g:run_rspec_bin = 'docker-compose exec server bin/rspec'
+
 nnoremap <Leader>r :RunSpecLine<CR>
 nnoremap <Leader>re :RunSpec<CR>
 
