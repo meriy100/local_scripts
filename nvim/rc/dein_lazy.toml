@@ -78,7 +78,7 @@ let g:vim_markdown_autowrite = 0
 
 [[plugins]]
 repo = 'vim-latex/vim-latex'
-on_ft = ['latex']
+on_ft = ['latex', 'tex']
 
 [[plugins]] # toml syntax
 repo = 'cespare/vim-toml'
@@ -126,4 +126,22 @@ on_ft = ['haskell']
 hook_add = '''
 let g:necoghc_enable_detailed_browse = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+'''
+
+[[plugins]]
+repo = 'neomake/neomake'
+on_ft = ['ruby', 'haskell']
+hook_add = '''
+autocmd! BufWritePost * Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_ruby_enabled_makers = ['mri','rubocop']
+let g:neomake_haskell_enabled_makers = ['ghcmod', 'hlint' ]
+let g:neomake_typescript_enabled_makers = ['tslint']
+
+augroup my_neomake_signs
+    au!
+    autocmd ColorScheme *
+        \ hi NeomakeErrorSign ctermfg=white |
+        \ hi NeomakeWarningSign ctermfg=yellow
+augroup END
 '''

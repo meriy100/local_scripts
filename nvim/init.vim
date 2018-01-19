@@ -13,7 +13,7 @@ endif
 if filereadable(expand('~/.config/nvim/color.vim'))
   source ~/.config/nvim/color.vim
 endif
-
+"
 if filereadable(expand('~/.config/nvim/ctrlp.vim'))
   source ~/.config/nvim/ctrlp.vim
 endif
@@ -147,3 +147,4 @@ set helplang=ja,en
 
 set ttimeout
 set ttimeoutlen=50
+let g:tex_conceal = ''
