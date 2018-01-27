@@ -265,3 +265,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # alias runhaskell="stack runghc"
 
 fpath=(~/.zsh/completion $fpath)
+if [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi

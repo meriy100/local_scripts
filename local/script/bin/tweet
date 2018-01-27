@@ -1,9 +1,14 @@
 #!/Users/meriy100/.rbenv/shims/ruby
 
-require "twitter"
 require "tempfile"
 require "yaml"
 
+begin
+  require "twitter"
+rescue LoadError
+  system("gem install twitter")
+  require 'twitter'
+end
 
 def tweet message, option = {}
   config = YAML.load_file "#{ENV["HOME"]}/local/script/tweet/config.yml"

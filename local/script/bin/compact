@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ruby -pe '$_.gsub!(/\A\s*\z/, "")'

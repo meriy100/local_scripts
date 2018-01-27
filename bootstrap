@@ -50,3 +50,6 @@ ln -sf ~/dotfiles/.rubocop.yml ~/.rubocop.yml
 # https://docs.docker.com/compose/completion/#bash
 mkdir -p ~/.zsh/completion
 curl -L https://raw.githubusercontent.com/docker/compose/1.17.0/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
+
+mkdir -p $HOME/.zsh
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
