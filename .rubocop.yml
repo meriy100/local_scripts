@@ -28,6 +28,22 @@ Documentation:
   Enabled: false
 
 StringLiterals:
-  EnforcedStyle: double_quotes
+  EnforcedStyle: single_quotes
 FormatString:
   EnforcedStyle: percent
+Metrics/AbcSize:
+  Enabled: false
+Metrics/LineLength:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Style/BlockDelimiters:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Style/BracesAroundHashParameters:
+  Enabled: false
+Layout/MultilineBlockLayout:
+  Enabled: false
