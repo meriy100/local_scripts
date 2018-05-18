@@ -1,49 +1,58 @@
+# This file overrides https://github.com/bbatsov/rubocop/blob/master/config/default.yml
 
-# 日本語でのコメントを許可
-AsciiComments:
+AllCops:
+  Exclude:
+    - "vendor/**/*"
+    - "db/**/*"
+    - "bin/**/*"
+    - "spec/**/*"
+  DisplayCopNames: true
+
+Rails:
+  Enabled: true
+
+Rails/Output:
+  Exclude:
+    - "config/unicorn/**/*"
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/ClassLength:
+  CountComments: false
+  Max: 300
+
+Metrics/CyclomaticComplexity:
+  Max: 30
+
+Metrics/LineLength:
   Enabled: false
 
-# 成形のためにシングルスペースの有無
-SingleBeforeFirstArg:
+Metrics/MethodLength:
+  CountComments: false
+  Max: 30
+
+Naming/AccessorMethodName:
+  Exclude:
+    - "app/controllers/**/*"
+
+Style/AsciiComments:
   Enabled: false
 
-# トップレベルにあるコメントの有無
+Style/ClassAndModuleChildren:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 
-# 複数行での「lambda」で「->」による省略記法を許可
-Lambda:
+Style/FormatStringToken:
   Enabled: false
 
-# モジュール名::クラス名の定義を許可
-ClassAndModuleChildren:
+Style/FrozenStringLiteralComment:
   Enabled: false
 
-# メソッド名のprefixに「set_」「get_」を許可
-AccessorMethodName:
+Style/IfUnlessModifier:
   Enabled: false
 
-# クラスにコメントを残さない
-Documentation:
-  Enabled: false
-
-StringLiterals:
-  EnforcedStyle: single_quotes
-FormatString:
-  EnforcedStyle: percent
-Metrics/AbcSize:
-  Enabled: false
-Metrics/LineLength:
-  Enabled: false
-Metrics/MethodLength:
-  Enabled: false
-Metrics/BlockLength:
-  Enabled: false
-Style/BlockDelimiters:
-  Enabled: false
-Metrics/CyclomaticComplexity:
-  Enabled: false
-Style/BracesAroundHashParameters:
-  Enabled: false
-Layout/MultilineBlockLayout:
+Style/WhileUntilModifier:
   Enabled: false

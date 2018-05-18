@@ -35,3 +35,5 @@ nnoremap <silent> gff :Gdiff<CR>
 " nnoremap m :SyntasticCheck<CR>
 
 nnoremap<silent>eo :NERDTreeToggle<CR>
+
+autocmd QuickFixCmdPost *grep* cwindow
