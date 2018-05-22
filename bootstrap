@@ -9,7 +9,9 @@ ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.zshrc.alias ~/.zshrc.alias
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -sf ~/dotfiles/private.xml ~/Library/Application\ Support/Karabiner/private.xml
+
+mkdir -p ~/.config/karabiner/
+ln -sf ~/dotfiles/karabiner.json ~/.config/karabiner/karabiner.json
 
 ln -sf ~/dotfiles/.vimrc.set ~/.vim/.vimrc.set
 ln -sf ~/dotfiles/.vimrc.keymap ~/.vim/.vimrc.keymap
@@ -48,8 +50,8 @@ ln -sf ~/dotfiles/.rubocop.yml ~/.rubocop.yml
 
 # docker compose
 # https://docs.docker.com/compose/completion/#bash
-mkdir -p ~/.zsh/completion
-curl -L https://raw.githubusercontent.com/docker/compose/1.17.0/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
+# mkdir -p ~/.zsh/completion
+# curl -L https://raw.githubusercontent.com/docker/compose/1.17.0/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
 
 mkdir -p $HOME/.zsh
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting

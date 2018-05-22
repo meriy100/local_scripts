@@ -268,3 +268,4 @@ fpath=(~/.zsh/completion $fpath)
 if [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
     source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+export RUBY_CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline)"
