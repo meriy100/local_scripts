@@ -26,7 +26,7 @@
         {
          "type": "basic",
          "from": {
-           "key_code": "b",
+           "key_code": "semicolon",
            "modifiers": {
              "mandatory": ["control"]
            }

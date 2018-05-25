@@ -253,8 +253,6 @@ bindkey '^g' peco-src-git-branch
 
 
 
-
-
 # source ~/.bin/tmuxinator.zsh
 
 ### Haskell stack

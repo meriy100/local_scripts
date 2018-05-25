@@ -57,3 +57,21 @@ ln -sf ~/dotfiles/.rubocop.yml ~/.rubocop.yml
 
 mkdir -p $HOME/.zsh
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+
+
+# home brew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install readline
+brew install jq
+brew install gradle
+brew install python3
+brew install peco
+brew install redis
+brew install mysql
+brew install cmake
+brew install ghq
+brew install automake
+brew install selenium-server-standalone
+brew cask install chromedriver
+brew install imagemagick
+brew install graphviz
