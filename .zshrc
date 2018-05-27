@@ -218,7 +218,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export INSTALLER_PATH="$HOME/dotfiles/installer/"
 
 if [ -x "`which go`" ]; then
-    export GOROOT=/usr/local/Cellar/go/1.8.1/libexec
     export GOPATH=$HOME/go
     export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
