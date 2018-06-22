@@ -29,6 +29,8 @@ ln -sf ~/dotfiles/vim/rc/dein_lazy.toml ~/.vim/rc/dein_lazy.toml
 mkdir -p ~/local
 ln -sf ~/dotfiles/local/script ~/local/
 
+# mysql
+ln -sf ~/dotfiles/.my.cnf ~/.my.cnf
 
 # latexmkrc
 ln -sf ~/dotfiles/.latexmkrc ~/.latexmkrc
@@ -79,7 +81,13 @@ brew install graphviz
 brew install go
 brew install dep
 brew install colordiff
+brew install watchman
 
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install docker
+brew cask install ngrok
+brew cask install android-studio
+
+# circleci CLI
+curl -o /usr/local/bin/circleci https://circle-downloads.s3.amazonaws.com/releases/build_agent_wrapper/circleci && chmod +x /usr/local/bin/circleci
