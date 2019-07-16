@@ -82,6 +82,7 @@ brew install go
 brew install dep
 brew install colordiff
 brew install watchman
+brew install heroku
 
 brew cask install virtualbox
 brew cask install vagrant

@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
+# L6: .select { |branch_name| branch_name =~ /feature|meriy100/ }
 branch_names = ` git branch`.split("\n")
 branch_names
-  .select { |branch_name| branch_name =~ /feature|meriy100/ }
   .reject { |branch_name| branch_name =~ /^\*/ }
   .each do |branch_name|
     puts "\u001b[31m#{branch_name}\u001b[0m"
