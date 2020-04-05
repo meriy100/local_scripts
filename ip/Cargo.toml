@@ -1,0 +1,7 @@
+[package]
+name = "ip"
+version = "0.1.0"
+authors = ["meriy100 <ttattataa@gmail.com>"]
+edition = "2018"
+
+[dependencies]
