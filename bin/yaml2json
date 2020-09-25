@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby -r yaml -r json
+
+puts JSON[STDIN.read].to_yaml
