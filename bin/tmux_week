@@ -41,7 +41,7 @@ color_pallet = {
     sub: 198,
     left: 190,
     white: 22,
-    fg: 22,
+    fg: 92,
   },
   grey: {
     base: 17,
