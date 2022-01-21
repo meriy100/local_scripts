@@ -1,4 +1,5 @@
-#!/Users/meriy100/.rbenv/shims/ruby
+#!/usr/bin/env ruby
+
 shresult = `pmset -g ps`
 s = shresult.match /Now drawing from '(?<from>\w+ \w+)'/
 status = s[:from] == "AC Power" ? "⚡︎" : "❚"
