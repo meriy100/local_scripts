@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ruby -pe 'BEGIN {puts %Q!<html><head><meta charset="UTF-8"></head><body>!};;END{puts %Q!</body></html>!}'
