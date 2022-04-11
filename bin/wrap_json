@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby -rjson -roptparse
+option = {}
+opts = OptionParser.new
+opts.on("-t", "--type [TYPE]") { |v| option[:type] = v }
+opts.on("-k", "--key [KEY]") { |v| option[:key] = v }
+opts.parse!(ARGV)
+
+while STDIN.gets
+  value = case option[:type]
+  when 'int'
+    $_.to_i
+  when 'float'
+    $_.to_f
+  when 'bool'
+    $_.chomp == "true"
+  else
+    $_.chomp
+  end
+
+  puts({ (option[:key] || "key") => value }.to_json)
+end
+
