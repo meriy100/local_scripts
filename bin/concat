@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+ARGV.map do |fp|
+  print File.read(fp)
+end
+
