@@ -1,0 +1,3 @@
+#!/bin/sh
+
+tmux rename-window `ruby -e 'print Dir.pwd.split("/").last'`
