@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+num = if ARGV.first
+  ARGV.first.to_i || 1
+else
+  1
+end
+puts(rand(num))
+
