@@ -1,4 +1,0 @@
-#!/bin/sh
-
-git rebase origin/$(git branch | grep '*' | awk '{print $2}')
-
