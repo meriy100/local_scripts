@@ -1,4 +1,4 @@
 #!/bin/sh
 
-git pull origin $(git branch | grep '*' | awk '{print $2}')
+git rebase origin/$(git branch | grep '*' | awk '{print $2}')
 
