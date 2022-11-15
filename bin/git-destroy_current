@@ -1,0 +1,6 @@
+#!/bin/sh
+
+BRANCH=$(git br | grep "*" | ruby -pe '$_.gsub!("* ", "")')
+git show | head -n 1 | ruby -a -ne 'puts $F[1]' | xargs git checkout
+git br -D $BRANCH
+
