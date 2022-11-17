@@ -1,0 +1,5 @@
+#!/bin/sh
+
+BRANCH=$(git status | grep HEAD | ruby -ne 'print $_.match(/origin\/(.*)$/)[1].chomp')
+git switch -C $BRANCH
+
