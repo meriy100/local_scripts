@@ -1,4 +1,4 @@
-#!/Users/meriy100/.rbenv/shims/ruby
+#!/usr/bin/env ruby
 
 require "tempfile"
 
