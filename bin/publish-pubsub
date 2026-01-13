@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+
+require "google/cloud/pubsub"
+require "optparse"
+
+# GCP プロジェクト ID を環境変数から取得
+project_id = ENV["PROJECT"]
+
+# コマンドライン引数の処理
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: ruby pubsub_publish.rb [options]"
+
+  # トピック名
+  opts.on("-t", "--topic TOPIC", "Pub/Sub トピック名 (必須)") do |t|
+    options[:topic] = t
+  end
+
+  # 属性（key=value の形式）
+  opts.on("-a", "--attribute KEY=VALUE", "メッセージ属性 (複数指定可能)") do |attr|
+    key, value = attr.split("=")
+    options[:attributes] ||= {}
+    options[:attributes][key] = value
+  end
+
+  # ヘルプ表示
+  opts.on("-h", "--help", "ヘルプを表示する") do
+    puts opts
+    exit
+  end
+end.parse!
+
+# GCP プロジェクト ID が設定されていない場合は実行を停止
+if project_id.nil? || project_id.strip.empty?
+  puts "エラー: GCP プロジェクト ID が指定されていません。環境変数 PROJECT を設定してください。"
+  exit 1
+end
+
+
+# トピックが指定されていない場合にエラーを出す
+unless options[:topic]
+  puts "エラー: トピック名は必須です。'-t' オプションで指定してください。"
+  exit 1
+end
+
+# Pub/Sub クライアントを初期化
+pubsub = Google::Cloud::Pubsub.new(project_id: project_id)
+topic = pubsub.topic(options[:topic])
+
+# トピックが存在しない場合のエラーチェック
+if topic.nil?
+  puts "エラー: 指定されたトピック '#{options[:topic]}' が見つかりません。"
+  exit 1
+end
+
+# 標準入力からデータを読み込む
+input = $stdin.read.strip
+
+if input.empty?
+  puts "エラー: メッセージ本文が空です。標準入力で内容を渡してください。"
+  exit 1
+end
+
+# メッセージをトピックに配信
+message = topic.publish(input, **(options[:attributes] || {}))
+
+puts "メッセージを配信しました。ID: #{message.message_id}"
+puts "送信された属性: #{options[:attributes]}"
+
