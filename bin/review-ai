@@ -1,8 +1,36 @@
 #!/bin/sh
 
 # AI-powered git diff review script
-# Usage: review-ai [custom_prompt]
+# Usage: review-ai [-p markdown_file] [custom_prompt]
 # Reviews current git changes including new files using Claude AI
+# -p option allows specifying a markdown file for additional context
+
+# Initialize variables
+MARKDOWN_FILE=""
+CUSTOM_PROMPT=""
+
+# Parse options
+while getopts "p:" opt; do
+    case $opt in
+        p)
+            MARKDOWN_FILE="$OPTARG"
+            # Check if markdown file exists
+            if [ ! -f "$MARKDOWN_FILE" ]; then
+                echo "Error: Markdown file '$MARKDOWN_FILE' not found" >&2
+                exit 1
+            fi
+            ;;
+        \?)
+            echo "Usage: review-ai [-p markdown_file] [custom_prompt]" >&2
+            echo "  -p: Specify a markdown file to include as review context" >&2
+            exit 1
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+# Get custom prompt if provided
+CUSTOM_PROMPT="$1"
 
 # Check if we're in a git repository
 if ! git rev-parse --git-dir > /dev/null 2>&1; then
@@ -21,8 +49,50 @@ git add .
 
 # Check if there are any changes to review
 if ! git diff --cached --quiet HEAD; then
-   # Use custom prompt if provided, otherwise use default
-   PROMPT="${1:-git diff から現在の編集内容を確認し、レビューしてください}"
+   # Build the prompt
+   if [ -n "$MARKDOWN_FILE" ]; then
+       # Read markdown content with error handling
+       if ! MARKDOWN_CONTENT=$(cat "$MARKDOWN_FILE" 2>/dev/null); then
+           echo "Error: Failed to read markdown file '$MARKDOWN_FILE'" >&2
+           exit 1
+       fi
+
+       # Check markdown file size (warn if >50KB)
+       if [ $(wc -c < "$MARKDOWN_FILE") -gt 50000 ]; then
+           echo "Warning: Markdown file is large (>50KB). This may cause prompt length issues." >&2
+       fi
+
+       if [ -n "$CUSTOM_PROMPT" ]; then
+           # Use custom prompt with markdown context
+           PROMPT=$(cat << EOF
+以下のMarkdownファイル（$MARKDOWN_FILE）の内容を参考にして、git diffをレビューしてください。
+
+【実装仕様・計画】
+$MARKDOWN_CONTENT
+
+【レビュー指示】
+$CUSTOM_PROMPT
+EOF
+)
+       else
+           # Use default prompt with markdown context
+           PROMPT=$(cat << EOF
+以下のMarkdownファイル（$MARKDOWN_FILE）の内容を参考にして、git diffから現在の編集内容を確認し、レビューしてください。
+
+【実装仕様・計画】
+$MARKDOWN_CONTENT
+
+【レビュー内容】
+- 実装が仕様通りに行われているか確認
+- コードの品質や改善点の指摘
+- 実装方針との整合性チェック
+EOF
+)
+       fi
+   else
+       # Use original behavior when no markdown file specified
+       PROMPT="${CUSTOM_PROMPT:-git diff から現在の編集内容を確認し、レビューしてください}"
+   fi
 
    # Get the diff and pass it to claude
    git diff HEAD | claude -p "$PROMPT"
