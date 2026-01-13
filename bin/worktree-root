@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+def worktree_root
+  Dir.pwd.gsub!(/ghq/, "worktree")
+end
+
+if __FILE__ == $PROGRAM_NAME
+  print worktree_root
+end
+
