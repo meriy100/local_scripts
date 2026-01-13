@@ -65,27 +65,37 @@ if ! git diff --cached --quiet HEAD; then
        if [ -n "$CUSTOM_PROMPT" ]; then
            # Use custom prompt with markdown context
            PROMPT=$(cat << EOF
-以下のMarkdownファイル（$MARKDOWN_FILE）の内容を参考にして、git diffをレビューしてください。
+以下のMarkdownファイル（$MARKDOWN_FILE）の内容を確認し、git diffをレビューしてください。
 
-【実装仕様・計画】
+【Markdownファイルの内容】
 $MARKDOWN_CONTENT
 
 【レビュー指示】
-$CUSTOM_PROMPT
+1. まず、上記Markdownファイル内で「ユーザーからの指示」に相当するセクション（例：「# ユーザーからの指示」「# 要件」「# 指示」など）を特定してください
+2. そのセクションの内容を基に、以下の観点でgit diffの実装内容をレビューしてください：
+   - ユーザーの指示通りに実装されているか
+   - 仕様書の内容と実装の整合性
+   - コードの品質と改善点
+3. 追加レビュー指示: $CUSTOM_PROMPT
 EOF
 )
        else
            # Use default prompt with markdown context
            PROMPT=$(cat << EOF
-以下のMarkdownファイル（$MARKDOWN_FILE）の内容を参考にして、git diffから現在の編集内容を確認し、レビューしてください。
+以下のMarkdownファイル（$MARKDOWN_FILE）の内容を確認し、git diffから現在の編集内容をレビューしてください。
 
-【実装仕様・計画】
+【Markdownファイルの内容】
 $MARKDOWN_CONTENT
 
-【レビュー内容】
-- 実装が仕様通りに行われているか確認
-- コードの品質や改善点の指摘
-- 実装方針との整合性チェック
+【レビュー手順】
+1. まず、上記Markdownファイル内で「ユーザーからの指示」に相当するセクション（例：「# ユーザーからの指示」「# 要件」「# 指示」「# 概要」など）を特定してください
+2. そのセクションの内容を基に、以下の観点でgit diffの実装内容をレビューしてください：
+   - ユーザーの指示・要件通りに実装されているか
+   - Markdownファイル内の仕様書の内容と実装の整合性
+   - 実装方針や設計との一貫性
+   - コードの品質、可読性、保守性
+   - 潜在的な問題や改善点の指摘
+3. 「ユーザーからの指示」に相当するセクションが見つからない場合は、Markdownファイル全体を仕様書として扱い、通常のレビューを行ってください
 EOF
 )
        fi
