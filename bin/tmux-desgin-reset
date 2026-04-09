@@ -1,0 +1,8 @@
+#!/bin/sh
+
+tmux set -u pane-border-style
+tmux set -u pane-active-border-style
+tmux set -u status-style
+tmux set -u status-left
+tmux set -u status-right
+
